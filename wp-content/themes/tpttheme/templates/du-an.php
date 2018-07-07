@@ -101,7 +101,7 @@ $count_all = count($wpb_all_query);
                     <?php if($page > 1){?>
                         <li>
                             <a href="?page=<?php echo ($page - 1); ?>">
-                                <i class="fas fa-angle-double-left"></i>
+                                <i class="fa fa-angle-double-left"></i>
                             </a>
                         </li>
                         <?php }?>
@@ -115,7 +115,7 @@ $count_all = count($wpb_all_query);
                     <?php if($page < $num_pages){?>
                         <li>
                             <a href="?page=<?php echo ($page + 1); ?>">
-                                <i class="fas fa-angle-double-right"></i>
+                                <i class="fa fa-angle-double-right"></i>
                             </a>
                         </li>
                         <?php }?> 
