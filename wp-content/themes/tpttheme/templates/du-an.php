@@ -40,7 +40,7 @@ $args = array (
 $wpb_all_query = get_posts($args);
 $count_all = count($wpb_all_query);
 ?> 
-<section class="breadcrumb-section parallax" style="background-image: url(/wp-content/uploads/2018/05/header-bg.png);background-position: center -90px;">
+<section class="header-breadcrumb" style="background-image: url(/wp-content/uploads/2018/05/header-bg.png);">
     <div class="container">
         <div class="row">
             <div class="col-md-5">
@@ -53,7 +53,7 @@ $count_all = count($wpb_all_query);
         </div>
     </div>
 </section>
-<section class="pad-t80 pad-b50">
+<section class="pad-t50 pad-b50">
     <div class="container">
         <div class="row">
             <div class="col-md-12">

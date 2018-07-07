@@ -113,7 +113,7 @@
                         <div id="abc"></div>
                         <div id="sodoLoban"></div>
                        <div style="width:1px;height:375px;background:#ffa500;position:absolute;z-index:2;top:53px;left:50%;"></div>
-                        <p style="z-index:2;right:0; no-repeat 0 0; padding-left:20px; line-height: 22px;">Kéo thước để xem</p>
+                        <p style="z-index:2;right:0; no-repeat 0 0; padding-left:0px; line-height: 22px;    text-transform: uppercase;font-weight: bold;">Kéo thước để xem</p>
                         <p style="position:absolute;z-index:2;top:22px;left:0;"><strong>Thước Lỗ Ban 52.2cm:</strong> Khoảng không thông thủy (cửa, cửa sổ...)</p>
                         <p style="position:absolute;z-index:2;top:158px;left:0;"><strong>Thước Lỗ Ban 42.9cm (Dương trạch):</strong> Khối xây dựng (bếp, bệ, bậc...)</p>
                         <p style="position:absolute;z-index:2;top:293px;left:0;"><strong>Thước Lỗ Ban 38.8cm (Âm phần):</strong> Đồ nội thất (bàn thờ, tủ...)</p>

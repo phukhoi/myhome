@@ -19,20 +19,20 @@ get_header();
     $tag = get_the_tags ($post_id);
     $gallery = get_field('gallery_fields');
     ?> 
-    <section class="breadcrumb-section parallax" style="background-image: url(/wp-content/uploads/2018/05/header-bg.png);background-position: center -90px;">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-5">
-                    <div class="page-title">
-                        <h1><?php the_title() ; ?></h1>
-                    </div>
-                </div>
-                <div class="col-md-7">
+    <section class="header-breadcrumb" style="background-image: url(/wp-content/uploads/2018/05/header-bg.png);">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-5">
+                <div class="page-title">
+                    <h1><?php the_title() ; ?></h1>
                 </div>
             </div>
+            <div class="col-md-7">
+            </div>
         </div>
+    </div>
     </section>
-    <section class="pad80">
+    <section class="pad-t50">
         <div class="container">
             <div class="row">
                 <div class="col-md-8">
