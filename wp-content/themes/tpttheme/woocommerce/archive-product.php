@@ -26,37 +26,6 @@ global $maxthemes;
 global $wp_query;
 $title_contact = 'Liên hệ';
 ?>
-<style type="text/css">
-.pro-box:nth-child(3n+1) {
-    clear: both;
-}
-ul.page-numbers{
-    text-align: center;
-}
-ul.page-numbers li{
-    display: inline-block;
-    background: #f6d113;
-    padding: 3px 10px 3px 10px;
-    color: #fff;
-    font-weight: bold;
-}
-span.current{
-
-}
-.item-price{
-    margin: 10px 0px;
-}
-.item-price span{
-    font-size: 12pt;
-    font-weight: bold;
-}
-a.btn-contact{
-    background: #f6d113;
-    color: #fff;
-    font-weight: bold;
-    text-transform: uppercase;
-}
-</style>
 <section class="breadcrumb-section parallax" style="background-image: url(/wp-content/uploads/2018/05/header-bg.png);background-position: center -90px; margin-bottom: 15px">
     <div class="container">
         <div class="row">

@@ -9,9 +9,9 @@ $args_pro_news = array(
 $loop_pro = new WP_Query($args_pro_news) ; 
 ?>
 <div class="widget widget-recent-post">
-    <h3 class="widget-title title14">
+    <h4 class="widget-title title14">
         Sản phẩm mới nhất
-    </h3>
+    </h4>
     <div class="widget-content">
         <ul>
             <?php while ( $loop_pro->have_posts() ) : $loop_pro->the_post(); global $product; ?>

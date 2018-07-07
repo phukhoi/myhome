@@ -96,7 +96,8 @@ button.addcart-link{
 	font-weight: bold;
 	color: #000;
 	background-color: #fff !important;
-	border: 2px solid #000;
+	border: 1.5px solid #000;
+    margin-left: 5px;
 }
 button.addcart-link:hover{
 	color: #fff;
@@ -166,4 +167,42 @@ a.checkout-button:hover{
     border-radius: 0px !important;
     color: #000 !important;
     background-color: #f6d014 !important;
+}
+.wpcf7-form textarea {
+     min-height: 120px !important; 
+}
+.pro-box:nth-child(3n+1) {
+    clear: both;
+}
+ul.page-numbers{
+    text-align: center;
+}
+ul.page-numbers li{
+    display: inline-block;
+}
+
+ul.page-numbers li a{
+    color: #000;
+    border: 1px solid #000;
+    padding: 5px 10px;
+    background: #fff;
+}
+li span.current {
+    border: 1px solid #f6d014;
+    padding: 5px 12px;
+    background: #f6d014;
+    color: #fff;
+}
+.item-price{
+    margin: 10px 0px;
+}
+.item-price span{
+    font-size: 12pt;
+    font-weight: bold;
+}
+a.btn-contact{
+    background: #f6d113;
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
 }

@@ -11,9 +11,9 @@ $news_post = get_posts($args_news_post);
 ?>
 <?php if ($news_post) : ?>
     <div class="widget widget-recent-post">
-        <h3 class="widget-title title14">
+        <h4 class="widget-title title14">
             Bài viết mới nhất
-        </h3>
+        </h4>
         <div class="widget-content">
             <?php foreach ( $news_post as $post ) : setup_postdata( $post ); ?>
                 <div class="latest-news">
