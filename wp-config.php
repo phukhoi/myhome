@@ -27,7 +27,7 @@ define('DB_USER', 'root');
 // define('DB_USER', 'myhomevn_us');
 
 /** MySQL database password */
-define('DB_PASSWORD', 'root');
+define('DB_PASSWORD', '');
 // define('DB_PASSWORD', '#myhomevn_us#');
 
 /** MySQL hostname */

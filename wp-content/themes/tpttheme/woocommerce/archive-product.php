@@ -103,13 +103,17 @@ $title_contact = 'Liên hệ';
                                             <?php woocommerce_product_subcategories(); ?>
                                             <?php while ( have_posts() ) : the_post(); global $product; ?>
                                                 <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 pro-box">
-                                                    <div class="portfolio-post">
+                                                    <div class="portfolio-post custom-product-hover">
                                                         <?php echo woocommerce_get_product_thumbnail();?>
                                                         <div class="hover-box">
                                                             <div class="inner-hover">
-                                                                <h4><?php echo esc_html( $post->post_title ); ?></h4>
-                                                                <a class="link" href="<?php echo get_permalink(); ?>"><i class="fa fa-search"></i></a>
-                                                                <a class="link" href="<?php echo get_permalink(); ?>"><i class="fa fa-cart-plus"></i></a>
+                                                                <div class="block-title">
+                                                                    <h4><?php echo  wp_trim_words($post->post_title, 15, '...') ; ?></h4>
+                                                                </div>
+                                                                <div class="block-social-link">
+                                                                    <a class="link" href="<?php echo get_permalink(); ?>"><i class="fa fa-search"></i></a>
+                                                                    <a class="link" href="<?php echo get_permalink(); ?>"><i class="fa fa-cart-plus"></i></a>
+                                                                </div>
                                                             </div>                      
                                                         </div>
                                                     </div>
