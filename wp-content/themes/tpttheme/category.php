@@ -107,17 +107,32 @@ $count_all = count($wpb_all_query);
             endforeach; 
             wp_reset_postdata(); 
             ?> 
+            <?php ?>
             <?php if ($post_count> $posts_per_page){?>
             <div class="row text-right">
                 <div class="col-md-12">
                     <ul class="pagination">
+                        <?php if($page > 1){?>
+                        <li>
+                            <a href="?page=<?php echo ($page - 1); ?>">
+                                <i class="fas fa-angle-double-left"></i>
+                            </a>
+                        </li>
+                        <?php }?>
                         <?php for($i=1;$i<=$num_pages;$i++) {?> 
-                            <?php if($i==$page){ ?>
-                                <li class="active"><a href="?page=<?php echo $i; ?>"><?php echo $i; ?></a></li> 
-                            <?php }else { ?> 
-                                <li ><a href="?page=<?php echo $i; ?>"><?php echo $i; ?></a></li> 
-                            <?php }?>
-                        <?php }?> 
+                        <?php if($i==$page){ ?>
+                        <li class="active"><a href="?page=<?php echo $i; ?>"><?php echo $i; ?></a></li> 
+                        <?php }else { ?> 
+                        <li ><a href="?page=<?php echo $i; ?>"><?php echo $i; ?></a></li> 
+                        <?php }?>
+                        <?php }?>
+                        <?php if($page < $num_pages){?>
+                        <li>
+                            <a href="?page=<?php echo ($page + 1); ?>">
+                                <i class="fas fa-angle-double-right"></i>
+                            </a>
+                        </li>
+                        <?php }?>
                     </ul>
                 </div>
             </div>
