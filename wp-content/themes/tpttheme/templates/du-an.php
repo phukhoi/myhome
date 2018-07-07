@@ -4,7 +4,7 @@
 * */
 get_header();
 global $maxthemes;
-$posts_per_page = 10;
+$posts_per_page = 2;
 if ( get_query_var( 'page' ) ) { 
   $page = get_query_var( 'page' ); 
 }
@@ -78,8 +78,14 @@ $count_all = count($wpb_all_query);
                                 <div class="hover-box">
                                     <div class="inner-hover">
                                         <h4><?php echo esc_html( $post->post_title ); ?></h4>
-                                        <a class="link" href="<?php echo get_permalink( $post->ID ); ?>"><i class="fa fa-search"></i></a>
-                                        <a class="zoom" href="<?php echo $image[0]; ?>?v=1.1" data-lightbox="portfolio-1"><i class="fa fa-picture-o"></i></a>
+                                        <!-- <a class="link" href="<?php echo get_permalink( $post->ID ); ?>"><i class="fa fa-search"></i></a> -->
+                                        <a class="zoom img" href="<?php echo $image[0]; ?>?v=1.1" data-lightbox="portfolio-1">
+                                            <img class="gallery-hover-icon" src="<?php echo get_template_directory_uri().'/assets/images/icon/gallery-icon.png' ?>" alt="Xem thêm">   
+                                        </a>
+                                        <a class="zoom title" href="<?php echo get_permalink( $post->ID ); ?>">
+                                            <p>Xem thêm</p> 
+                                        </a>
+                                        
                                     </div>                      
                                 </div>
                             </div>
