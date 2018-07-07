@@ -1,0 +1,62 @@
+/* Menu */
+.current-menu-item{
+    a{
+        color: #f6d014 !important;
+    }
+}
+.project-details{
+    .project-hover-icon{
+        width: 18% !important;
+        -webkit-transition: -webkit-transform .8s ease-in-out;
+        transition:         transform .8s ease-in-out;
+        &:hover{
+            -webkit-transform: rotateY(180deg);
+            transform: rotateY(180deg);
+        } 
+    }
+    p{
+        font-size: 0.7em;
+        &:hover{
+            color: #000;
+        }
+    }
+}
+
+/* Page Du An */
+.portfolio-post{
+    .hover-box{
+        .inner-hover{ 
+            .zoom{
+                display: block;
+                text-decoration: none;
+                line-height: 5px;
+                text-align: center;
+                margin: auto;
+                border: none;
+                background: none;
+                width: 60px;
+                
+                &:hover{
+                    background: none;
+                }
+                &.img{
+                    -webkit-transition: -webkit-transform .8s ease-in-out;
+                    transition:         transform .8s ease-in-out;
+                    &:hover{
+                        -webkit-transform: rotateY(180deg);
+                        transform: rotateY(180deg);
+                    }
+                }
+                &.title{
+                    width: 100px;
+                    p{
+                        line-height: 10px;
+                        &:hover{
+                            color: #000;
+                        }
+                    }
+                }
+            }
+        }
+    }
+} 

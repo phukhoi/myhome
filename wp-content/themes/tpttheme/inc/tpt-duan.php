@@ -20,7 +20,11 @@ $wpb_duan = new WP_Query(array('post_type'=>'duan', 'post_status'=>'publish'));
                             <img class="img-responsive" src="<?php echo $image[0]; ?>?v=1.1" alt="<?php echo esc_html( get_the_title() ); ?>">
                             <div class="project-details">
                                 <h4><?php echo esc_html( get_the_title() ); ?></h4> 
-                                <a class="link" href="<?php echo get_permalink( $post->ID ); ?>"><i class="fa fa-picture-o"></i></a>
+                                <a class="link" href="<?php echo get_permalink( $post->ID ); ?>">
+                                <!-- <i class="fa fa-picture-o"></i> -->
+                                <img class="project-hover-icon" src="<?php echo get_template_directory_uri().'/assets/images/icon/gallery-icon.png' ?>" alt="Xem thêm">
+                                <p>Xem thêm</p>
+                                </a>
                             </div>
                         </div>
                     </div> 
