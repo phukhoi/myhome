@@ -95,7 +95,7 @@ $count_all = count($wpb_all_query);
             </div>
         <?php endif; ?>
         <?php if ($post_count> $posts_per_page){?>
-        <div class="row text-center">
+        <div class="row text-right">
             <div class="col-md-12">
                 <ul class="pagination">
                     <?php for($i=1;$i<=$num_pages;$i++) {?> 

@@ -32,7 +32,7 @@ get_header();
         </div>
     </div>
     </section>
-    <section class="pad-t50">
+    <section class="pad-t50 pad-b50">
         <div class="container">
             <div class="row">
                 <div class="col-md-8">
@@ -129,6 +129,7 @@ get_header();
                         </p>
                         <?php }?>
                     </div>
+                    <div class="fb-like" data-href="" data-layout="standard" data-action="like" data-size="small" data-show-faces="false" data-share="true"></div>
                 </div>
             </div>
         </div>
@@ -139,6 +140,10 @@ get_header();
     $( document ).ready(function() {
         var _post_name = $("#_post_name").val();
         $("[name=post_name]").val(_post_name);
+
+        //facebook function
+        var url = window.location.href;
+        $('.fb-like').attr('data-href', url);
     });
 </script>
 <?php get_footer(); ?>

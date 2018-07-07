@@ -202,11 +202,16 @@ ul.page-numbers li{
 }
 
 ul.page-numbers li a{
-    color: #000;
-    border: 1px solid #000;
+    color: #ccc;
+    border: 1px solid #ccc;
     padding: 5px 10px;
     background: #fff;
 }
+ul.page-numbers li a:hover{
+    color: #fff;
+    background: #f6d014;
+}
+
 li span.current {
     border: 1px solid #f6d014;
     padding: 5px 12px;
@@ -245,4 +250,36 @@ a.btn-contact{
 	background: url('../images/icon/left-arrow-grey.png');
 	background-size: 30px !important;
 	background-position: center left;
+	background-repeat: no-repeat;
+}
+.tp-rightarrow:before{
+	content: '' !important;
+	background: url('../images/icon/right-arrow-grey.png');
+	background-size: 30px !important;
+	background-position: center right;
+	background-repeat: no-repeat;
+}
+.latest-news p{
+	line-height: 15px;
+}
+.widget-content .post-title{
+	padding: 10px 0 15px 0;
+}
+.widget-content .post-title a{
+	color: #000;
+}
+.widget-content .post-title a:hover{
+	color: #f6d014;
+}
+.has-sub-cat a{
+	color: #000;
+}
+.has-sub-cat a:hover{
+	color: #f6d014;
+}
+.has-sub-cat.active a{
+	color: #f6d014;
+}
+.footer-text p:hover{
+	color: #f6d014;	
 }

@@ -25,12 +25,12 @@ global $post;
 global $maxthemes;
 global $wp_query;
 ?>
-<section class="breadcrumb-section parallax" style="background-image: url(/wp-content/uploads/2018/05/header-bg.png);background-position: center -90px; margin-bottom: 15px">
+<section class="header-breadcrumb" style="background-image: url(/wp-content/uploads/2018/05/header-bg.png);">
     <div class="container">
         <div class="row">
             <div class="col-md-5">
                 <div class="page-title">
-                    <h1><?php the_title();?></h1>
+                    <h1><?php the_title() ; ?></h1>
                 </div>
             </div>
             <div class="col-md-7">
@@ -39,7 +39,7 @@ global $wp_query;
     </div>
 </section>
 <div id="content">
-    <div class="content-page">
+    <div class="content-page pad-t50 pad-b50">
         <div class="container">
             <div class="row">
                 <div class="col-md-9 col-sm-8 col-col-xs-12">

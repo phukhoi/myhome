@@ -14,7 +14,7 @@ $wpb_post = get_posts($args_post);
 ?>  
 <?php get_template_part('inc/tpt', 'slider'); ?> 
 <?php get_template_part('inc/tpt', 'duan'); ?> 
-<section class="pad-t80 pad-b50">
+<section class="pad-b50">
 	<div class="container">
 		<div class="row">
 			<div class="section-title text-center">
@@ -36,7 +36,7 @@ $wpb_post = get_posts($args_post);
 								<img src="<?php echo $image[0]; ?>?v=1.1" class="img-responsive" alt="<?php echo esc_html( $item->post_title ); ?>"> 
 							</div>
 							<h4><a href="<?php echo get_permalink( $item->ID ); ?>"><?php echo esc_html( $item->post_title ); ?></a></h4>
-							<p><?php echo esc_html( $item->post_excerpt ); ?></p>
+							<p><?php echo esc_html( wp_trim_words($item->post_excerpt, 30, '...') ); ?></p>
 						</div>
 					</div>
 				<?php endforeach; ?>
