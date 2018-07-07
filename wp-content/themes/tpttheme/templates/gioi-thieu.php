@@ -95,7 +95,7 @@
               <div class="form-group">
                 <div class="col-sm-8 control-label text-left-tpt">
                   <label for="">
-                    Diện tích đất (m2)
+                    DIỆN TÍCH ĐẤT (m2)
                   </label>
                 </div>
                 <div class="col-sm-4 control-input">
@@ -106,7 +106,7 @@
               <div class="form-group">
                 <div class="col-sm-8 control-label text-left-tpt">
                   <label for="">
-                    Diện xây dựng ( tầng trệt )
+                    DIỆN XÂY DỰNG ( tầng trệt )
                   </label>
                 </div>
                 <div class="col-sm-4 control-input">
@@ -117,7 +117,7 @@
               <div class="form-group ">
                 <div class="col-sm-8 control-label text-left-tpt">
                   <label for="">
-                    Số tầng ( bao gồm tầng trệt )
+                    SỐ TẦNG ( bao gồm tầng trệt )
                   </label>
                 </div>
                 <div class="col-sm-4 control-input">
