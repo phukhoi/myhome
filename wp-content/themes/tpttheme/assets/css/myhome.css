@@ -1,0 +1,82 @@
+.text-uppercase{
+	text-transform: uppercase;
+	font-weight: bold;
+}
+#fb-page{
+	width: 100%;
+}
+.fb-page {
+	width: 100%;
+	min-height: 300px;
+}
+hr{
+	width: 97.5%;
+	margin-top: 15px;
+	margin-bottom: 10px;
+	
+}
+.margin-top-0{
+	margin-top:0px !important;
+}
+.related_topics{
+	margin-top: 15px;
+}
+.related_topics span{
+	background: #f6d014;
+	padding: 10px 15px;
+	color: black;
+}
+.navbar-brand img{
+	width: 33%;
+}
+.text-left-tpt{
+	text-align: left !important;
+}
+.table-tpt{
+	border-bottom: 3px solid;
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+.table-tpt th{
+	text-transform: uppercase;
+	text-align: center;
+	font-weight: bold;
+}
+.bold{
+	font-weight: bold;
+}
+.btn-type-design{
+	text-align: center;
+	padding: 10px 0px;
+}
+.box-dutoan{
+	padding: 0px 5px 5px 5px;
+	border: 1px solid;
+	margin-top: 15px;
+}
+.breadcrumb-section {
+	padding: 70px 0;
+}
+.ptb-10{
+	padding: 10px 0;
+}
+ul.related-posts a{
+	color: black;	
+}
+ul.related-posts a:hover{
+	color: #f6d014;	
+}
+.color-black{
+	color: #999 !important;
+}
+.color-black.active{
+	color: #fbb900 !important;
+}
+.c-phong-thuy{
+	background: #1e2029;
+	padding: 15px 0px;
+	margin-bottom: 35px;
+}
+.pad-t35 {
+    padding-top: 35px;
+}
