@@ -1626,3 +1626,5 @@ Stack trace:
 
 2018-07-07T10:29:56+00:00 CRITICAL Call to undefined function get_template_directory_url()
 
+2018-07-07T13:33:25+00:00 CRITICAL Call to undefined function wp_substr()
+

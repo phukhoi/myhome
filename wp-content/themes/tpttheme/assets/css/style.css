@@ -1443,6 +1443,7 @@ ul.filter li a.active {
     overflow: hidden; }
     .portfolio-post .hover-box .inner-hover {
       position: absolute;
+      height: 100%;
       width: 100%; }
       .portfolio-post .hover-box .inner-hover h4 {
         color: #434343;
@@ -1498,8 +1499,8 @@ ul.filter li a.active {
   .portfolio-post:hover .hover-box {
     opacity: 1; }
     .portfolio-post:hover .hover-box .inner-hover h4 {
-      -webkit-transform: translate3d(0, 400%, 0);
-      transform: translate3d(0, 400%, 0); }
+      -webkit-transform: translate3d(0, 280%, 0);
+      transform: translate3d(0, 280%, 0); }
     .portfolio-post:hover .hover-box .inner-hover p {
       -webkit-transform: translate3d(0, 350%, 0);
       transform: translate3d(0, 350%, 0); }

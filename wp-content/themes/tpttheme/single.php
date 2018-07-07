@@ -39,7 +39,7 @@ get_header();
                     <div class="single-blog-post">
                         <div class="blog-img">
                             <img src="<?php echo $image[0]; ?>" class="img-responsive" alt="<?php the_title() ; ?>">
-                            <div class="img-overlay">
+                            <div class="img-overlay hidden">
                                 <a href="#"><i class="fa fa-link"></i></a>
                             </div>
                         </div>
@@ -71,8 +71,9 @@ get_header();
                                                         <img src="<?php echo $image['sizes']['large']; ?>?v=1.1" alt="<?php echo esc_html( get_the_title() ); ?>">
                                                         <div class="hover-box">
                                                             <div class="inner-hover">
-                                                                
-                                                                <a class="zoom" href="<?php echo $image['sizes']['large']; ?>?v=1.1" data-lightbox="portfolio-1"><i class="fa fa-picture-o"></i></a>
+                                                                <a class="zoom" href="<?php echo $image['sizes']['large']; ?>?v=1.1" data-lightbox="portfolio-1">
+                                                                    <img class="project-hover-icon" src="<?php echo get_template_directory_uri().'/assets/images/icon/gallery-icon.png' ?>" alt="Xem">
+                                                                </a>
                                                             </div>                      
                                                         </div>
                                                     </div>
