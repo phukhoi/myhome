@@ -20,53 +20,46 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 if ( $related_products ) : wp_reset_postdata();
-$title_contact = 'Liên hệ';
-?>
-<div class="product-related border radius">
-    <h2 class="title18">
-        <?php esc_html_e( 'Related products', 'woocommerce' ); ?>
-    </h2>
-    <div class="product-related-slider">
-        <div class="wrap-item" data-itemscustom="[[0,1],[480,2],[1024,3],[1200,4]]" data-pagination="false" data-navigation="true">
-        	<?php foreach ( $related_products as $related_product ) : ?>
-        	 <div class="item-product-order8">
-                <div class="item-product">
-                    <div class="product-thumb">
-                        <a href="<?php echo get_permalink( $related_product->get_id() ); ?>" class="product-thumb-link">
-                            <?php
-                            $image = wp_get_attachment_image_src( get_post_thumbnail_id($related_product->get_id()), "single-post-thumbnail" );
-                            if(empty($image[0])){
-                                $image[0] = 'http://ttppower.com.vn/wp-content/uploads/2017/12/thumb.png';
-                            }
-                            ?>
-                            <img src="<?php echo $image[0]; ?>?v=1.1" title="<?php echo get_the_title($related_product->get_id()); ?>" alt="<?php echo get_the_title($related_product->get_id()); ?>" class="img-responsive" /> 
-                        </a>
-                        <div class="product-extra-link">
-                            <a href="<?php echo get_permalink( $related_product->get_id() ); ?>" class="addcart-link"><i class="fa fa-arrow-circle-right" aria-hidden="true"></i></a>
+    $title_contact = 'Liên hệ';
+    ?>
+    <div class="product-related border radius">
+        <h2 class="title18">
+            <?php esc_html_e( 'Related products', 'woocommerce' ); ?>
+        </h2>
+        <br>
+        <div class="product-related-slider">
+            <?php if ( $related_products) : ?>
+                <div class="row owl-scroll">
+                    <?php foreach ( $related_products as $related_product ) : ?>
+                        <div class="col-md-12">
+                            <div class="latest-news">
+                                <div class="latest-news-img">
+                                    <?php
+                                    $image = wp_get_attachment_image_src( get_post_thumbnail_id($related_product->get_id()), "single-post-thumbnail" );
+                                    if(empty($image[0])){
+                                        $image[0] = 'http://ttppower.com.vn/wp-content/uploads/2017/12/thumb.png';
+                                    }
+                                    ?>
+                                    <img src="<?php echo $image[0]; ?>?v=1.1" title="<?php echo get_the_title($related_product->get_id()); ?>" alt="<?php echo get_the_title($related_product->get_id()); ?>" class="img-responsive" /> 
+                                </div>
+                                <h4 class="text-center">
+                                    <a href="<?php echo get_permalink( $related_product->get_id() ); ?>">
+                                        <?php echo get_the_title($related_product->get_id()); ?>
+                                    </a>
+                                </h4>
+                                <div class="text-center item-price">
+                                    <?php if($related_product->get_regular_price()) {?>
+                                    <span><?php echo number_format($related_product->get_regular_price(),'0','.','.').' VNĐ' ;?></span>
+                                    <?php }else{?>
+                                    <a class="btn btn-contact" href="<?php echo get_permalink(); ?>"><?php echo $title_contact; ?></a>
+                                    <?php }?>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="product-info">
-                        <h3 class="product-title">
-                            <a href="<?php echo get_permalink( $related_product->get_id() ); ?>">
-                                <?php echo get_the_title($related_product->get_id()); ?>
-                            </a>
-                        </h3> 
-                        <div class="product-price text-center">
-                            <?php if($related_product->get_regular_price()) {?>
-                            <ins><span><?php echo $related_product->get_regular_price().' VNĐ' ;?></span></ins>
-                            <?php }else{?>
-                            <a class="btn btn-contact" href="<?php echo get_permalink(); ?>"><?php echo $title_contact; ?></a>
-                            <?php }?>
-                        </div>
-                    </div>
+                    <?php endforeach; ?>
                 </div>
-            </div>
-
-
-             
-        	<?php endforeach; ?>
+            <?php endif; ?>
         </div>
     </div>
-</div>
 <?php endif;
 wp_reset_postdata();

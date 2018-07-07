@@ -78,5 +78,92 @@ ul.related-posts a:hover{
 	margin-bottom: 35px;
 }
 .pad-t35 {
-    padding-top: 35px;
+	padding-top: 35px;
+}
+a.btn-contact {
+	background: #f6d113;
+	color: #fff;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+.item-price span{
+	font-size: 12pt;
+	font-weight: bold;
+}
+button.addcart-link{
+	background: #fff !important;
+	text-transform: uppercase;
+	font-weight: bold;
+	color: #000;
+	background-color: #fff !important;
+	border: 2px solid #000;
+}
+button.addcart-link:hover{
+	color: #fff;
+	background-color: #f6d014 !important;
+	border: 2px solid #f6d014;
+}
+.input-number, .button-cart{
+	padding: 0px;
+}
+.input-number input{
+	width: 100%;
+	padding-left: 15px;
+	border: 1px solid;
+}
+.pro-description{
+	margin-top: 20px;
+}
+div.post-thumb{
+	text-align: center;
+}
+input[type='email'], input[type='date'], input[type='search'], input[type='number'], input[type='text'], input[type='tel'], input[type='url'], input[type='password'], textarea, select, .select2-container .select2-choice, .select2-container .select2-selection {
+	box-sizing: border-box;
+	border: 1px solid #ddd;
+	padding: 0 .75em;
+	height: 2.507em;
+	font-size: .97em;
+	border-radius: 0;
+	max-width: 100%;
+	width: 100%;
+	vertical-align: middle;
+	background-color: #fff;
+	color: #333;
+	box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+	transition: color .3s, border .3s, background .3s, opacity .3s;
+}
+textarea {
+    padding-top: 0.7em;
+    min-height: 120px;
+}
+#place_order{
+	text-transform: uppercase;
+    border: 2px solid #000;
+    border-radius: 0px;
+    background: #fff;
+    color: #000;
+    background-color: #fff;
+}
+#place_order:hover{
+    border: 2px solid #f6d014;
+    background: #f6d014;
+    color: #000;
+}
+a.checkout-button{
+	text-transform: uppercase;
+    border: 2px solid #f6d014 !important;
+    border-radius: 0px !important;
+    color: #000 !important;
+    background-color: #f6d014 !important;
+    margin-bottom: 15px !important;
+}
+a.checkout-button:hover{
+	color: #fff !important;
+}
+.woocommerce input.button{
+	text-transform: uppercase;
+    border: 2px solid #f6d014 !important;
+    border-radius: 0px !important;
+    color: #000 !important;
+    background-color: #f6d014 !important;
 }

@@ -127,7 +127,7 @@ a.btn-contact{
                                                 ) );
                                             }
                                         }
-                                        wc_clear_notices();
+                                        wc_clear_notices(); 
                                         ?>
                                         <div class="row">
                                             <?php woocommerce_product_loop_start(); ?>

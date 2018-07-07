@@ -25,29 +25,6 @@ global $post;
 global $maxthemes;
 global $wp_query;
 ?>
-<style type="text/css">
-.item-price span{
-    font-size: 12pt;
-    font-weight: bold;
-}
-button.addcart-link{
-    background: #f6d113;
-    text-transform: uppercase;
-    font-weight: bold;
-    color: #fff;
-}
-.input-number, .button-cart{
-    padding: 0px;
-}
-.input-number input{
-    width: 100%;
-    padding-left: 15px;
-    border: 1px solid;
-}
-.pro-description{
-    margin-top: 20px;
-}
-</style>
 <section class="breadcrumb-section parallax" style="background-image: url(/wp-content/uploads/2018/05/header-bg.png);background-position: center -90px; margin-bottom: 15px">
     <div class="container">
         <div class="row">
@@ -139,6 +116,7 @@ button.addcart-link{
                                 <h2 class="toggle-tab-title title14 radius border">
                                     Mô tả sản phẩm
                                 </h2>
+                                <br>
                                 <div class="toggle-tab-content">
                                     <div class="content-detail-tab">
                                     	<?php the_content(); ?>

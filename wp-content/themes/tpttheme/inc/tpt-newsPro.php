@@ -20,20 +20,20 @@ $loop_pro = new WP_Query($args_pro_news) ;
                     <?php
                     $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), "single-post-thumbnail" );
                     if(!$image[0]){
-                        $image[0] = 'http://stc.local/wp-content/uploads/2018/01/no_image-1.jpg';
+                        $image[0] = 'http://placehold.it/300x300';
                     }
                     ?>
                     <a href="<?php echo get_permalink(); ?>" class="product-thumb-link">
                         <img src="<?php echo $image[0]; ?>?v=1.1" alt="<?php echo esc_html( get_the_title() ); ?>" title="<?php echo esc_html( get_the_title() ); ?>" />
                     </a>
                 </div>
-                <div class="post-info">
-                    <h3 class="post-title">
+                <div class="post-info text-center">
+                    <h4 class="post-title">
                         <a href="<?php echo get_permalink(); ?>">
                             <?php echo esc_html( get_the_title() ); ?>
                         </a>
-                    </h3>
-                    <ul class="post-date-comment">
+                    </h>
+                    <ul class="post-date-comment hidden">
                         <li>
                             <i class="fa fa-clock-o" aria-hidden="true"></i>
                             <span><?php echo get_the_date('F'); ?>.<?php echo get_the_date('d'); ?></span>
