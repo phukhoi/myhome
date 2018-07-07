@@ -33,22 +33,22 @@
         display: block;
     }
 </style>
-<section class="breadcrumb-section parallax" style="background-image: url(/wp-content/uploads/2018/05/header-bg-1.png);background-position: center -90px;">
+<section class="header-breadcrumb" style="background-image: url(/wp-content/uploads/2018/05/header-bg-1.png);">
     <div class="container">
         <div class="row">
-            <div class="col-md-5 col-sm-5">
+            <div class="col-md-5">
                 <div class="page-title">
-                    <h1>Liên hệ</h1>
+                    <h1><?php the_title() ; ?></h1>
                 </div>
             </div>
-            <div class="col-md-7 col-sm-7">
+            <div class="col-md-7">
             </div>
         </div>
     </div>
 </section>
 <!-- End Breadcrumb Section -->
 <!-- Start Contact Info -->
-<section class="pad-t100 pad-b50">
+<section class="pad-t50">
     <div class="container">
         <div class="row">
             <div class="col-md-4">
@@ -82,9 +82,9 @@
     </div>
 </section>
 <!-- End Contact Info -->
-<hr>
+
 <!-- Start Contact Form Section -->
-<section class="pad80">
+<section class="">
     
     <div class="container">
         <div class="row">

@@ -48,7 +48,7 @@
                 },
                 arrows: {
                     enable: true,
-                    style: 'metis',
+                    style: 'uranus',
                     tmp: '',
                     rtl: false,
                     hide_onleave: true,

@@ -18,9 +18,9 @@ $cats_parent = get_categories($args_parent);
 <?php if(isset($cats_parent)){ ?>
 <div class="sidebar sidebar-left">
 	<div class="widget widget-product-cat">
-		<h3 class="widget-title title14">
+		<h4 class="widget-title title14">
 			Danh mục sản phẩm
-		</h3>
+		</h4>
 		<div class="widget-content">
 			<ul>
 				<?php foreach($cats_parent as $id => $category) : ?>

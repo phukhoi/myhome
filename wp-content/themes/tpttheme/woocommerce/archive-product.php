@@ -26,7 +26,7 @@ global $maxthemes;
 global $wp_query;
 $title_contact = 'Liên hệ';
 ?>
-<section class="breadcrumb-section parallax" style="background-image: url(/wp-content/uploads/2018/05/header-bg.png);background-position: center -90px; margin-bottom: 15px">
+<section class="header-breadcrumb" style="background-image: url(/wp-content/uploads/2018/05/header-bg.png);">
     <div class="container">
         <div class="row">
             <div class="col-md-5">
@@ -39,13 +39,13 @@ $title_contact = 'Liên hệ';
         </div>
     </div>
 </section>
-<div class="content-page">
+<div class="content-page pad-t50">
     <div class="container">
         <div class="row">            
             <div class="main_container col-md-9 col-sm-9 col-xs-12 col-sm-push-3">
                 <div class="content-grid-boxed">
                     <div class="content-grid-boxed">
-                        <div class="sort-pagi-bar clearfix">
+                        <div class="sort-pagi-bar clearfix pad-b30">
                             <div class="view-type pull-left">
                                 <?php
                                 $paged    = max( 1, $wp_query->get( 'paged' ) );

@@ -14,11 +14,8 @@
         <meta name="author" content="">
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="shortcut icon" href="assets/favicon/favicon.ico">
-        <link rel="apple-touch-icon" href="assets/favicon/apple-icon-57x57.png">
-        <link rel="apple-touch-icon" sizes="72x72" href="/wp-content/themes/tpttheme/assets/favicon/apple-icon-72x72.png">
-        <link rel="apple-touch-icon" sizes="114x114" href="/wp-content/themes/tpttheme/assets/favicon/apple-icon-114x114.png">
-        <link rel="apple-touch-icon" sizes="144x144" href="/wp-content/themes/tpttheme/assets/favicon/apple-icon-144x144.png">
+        <link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/assets/favicon/favicon.ico">
+        
         <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
         <script type='text/javascript' src='/wp-content/themes/tpttheme/assets/js/jquery-3.1.1.min.js'></script>
         <?php wp_head(); ?>
