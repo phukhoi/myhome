@@ -293,3 +293,6 @@ a.btn-contact{
 .portfolio-box .bedroom img {
     max-height: 400px;
 }
+.lb-nav a.lb-next {
+	width: 7% !important;
+}
