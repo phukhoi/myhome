@@ -1,18 +1,18 @@
 #header{
 	position: fixed !important;
-    top: 0;
-    width: 100%;
-    padding: 0 0 0 0;
-    z-index: 1000;
+	top: 0;
+	width: 100%;
+	padding: 0 0 0 0;
+	z-index: 1000;
 }
 
 .header-breadcrumb{
 	background-size: 100% 100%;
 	background-size: 100% 100%;
-    background-repeat: no-repeat;
-    margin-top: 80px !important;
-    height: 170px !important;
-    width: 100%;
+	background-repeat: no-repeat;
+	margin-top: 80px !important;
+	height: 170px !important;
+	width: 100%;
 }
 .header-breadcrumb .page-title h1{
 	padding-top: 70px;
@@ -117,7 +117,8 @@ button.addcart-link{
 	color: #000;
 	background-color: #fff !important;
 	border: 1.5px solid #000;
-    margin-left: 5px;
+	margin-left: 5px;
+	padding: 5px 10px !important;
 }
 button.addcart-link:hover{
 	color: #fff;
@@ -154,82 +155,82 @@ input[type='email'], input[type='date'], input[type='search'], input[type='numbe
 	transition: color .3s, border .3s, background .3s, opacity .3s;
 }
 textarea {
-    padding-top: 0.7em;
-    min-height: 120px;
+	padding-top: 0.7em;
+	min-height: 120px;
 }
 #place_order{
 	text-transform: uppercase;
-    border: 2px solid #000;
-    border-radius: 0px;
-    background: #fff;
-    color: #000;
-    background-color: #fff;
+	border: 2px solid #000;
+	border-radius: 0px;
+	background: #fff;
+	color: #000;
+	background-color: #fff;
 }
 #place_order:hover{
-    border: 2px solid #f6d014;
-    background: #f6d014;
-    color: #000;
+	border: 2px solid #f6d014;
+	background: #f6d014;
+	color: #000;
 }
 a.checkout-button{
 	text-transform: uppercase;
-    border: 2px solid #f6d014 !important;
-    border-radius: 0px !important;
-    color: #000 !important;
-    background-color: #f6d014 !important;
-    margin-bottom: 15px !important;
+	border: 2px solid #f6d014 !important;
+	border-radius: 0px !important;
+	color: #000 !important;
+	background-color: #f6d014 !important;
+	margin-bottom: 15px !important;
 }
 a.checkout-button:hover{
 	color: #fff !important;
 }
 .woocommerce input.button{
 	text-transform: uppercase;
-    border: 2px solid #f6d014 !important;
-    border-radius: 0px !important;
-    color: #000 !important;
-    background-color: #f6d014 !important;
+	border: 2px solid #f6d014 !important;
+	border-radius: 0px !important;
+	color: #000 !important;
+	background-color: #f6d014 !important;
 }
 .wpcf7-form textarea {
-     min-height: 120px !important; 
+	min-height: 120px !important; 
 }
 .pro-box:nth-child(3n+1) {
-    clear: both;
+	clear: both;
 }
 ul.page-numbers{
-    text-align: center;
+	text-align: center;
 }
 ul.page-numbers li{
-    display: inline-block;
+	display: inline-block;
 }
 
 ul.page-numbers li a{
-    color: #ccc;
-    border: 1px solid #ccc;
-    padding: 5px 10px;
-    background: #fff;
+	color: #ccc;
+	border: 1px solid #ccc;
+	padding: 5px 10px;
+	background: #fff;
 }
 ul.page-numbers li a:hover{
-    color: #fff;
-    background: #f6d014;
+	color: #fff;
+	background: #f6d014;
 }
 
 li span.current {
-    border: 1px solid #f6d014;
-    padding: 5px 12px;
-    background: #f6d014;
-    color: #fff;
+	border: 1px solid #f6d014;
+	padding: 5px 12px;
+	background: #f6d014;
+	color: #fff;
 }
 .item-price{
-    margin: 10px 0px;
+	margin: 10px 0px;
 }
 .item-price span{
-    font-size: 12pt;
-    font-weight: bold;
+	font-size: 12pt;
+	font-weight: bold;
 }
 a.btn-contact{
-    background: #f6d113;
-    color: #fff;
-    font-weight: bold;
-    text-transform: uppercase;
+	background: #f6d113;
+	color: #fff;
+	font-weight: bold;
+	text-transform: uppercase;
 }
 .pad-t50{
 	padding-top: 50px;
@@ -238,11 +239,11 @@ a.btn-contact{
 	max-height: 250px;
 }
 .latest-news-img img{
-	max-height: 160px;
+	max-height: 500px;
 }
 .btn-file {
-    padding: 20px 12px !important;
-    line-height: 0.1;
+	padding: 20px 12px !important;
+	line-height: 0.1;
 }
 
 .tp-leftarrow:before{
@@ -282,4 +283,13 @@ a.btn-contact{
 }
 .footer-text p:hover{
 	color: #f6d014;	
+}
+.section-detail .feature-2 {
+    padding: 20px 0 !important;
+}
+.portfolio-box .bedroom:nth-child(2n+1) {
+    clear: both;
+}
+.portfolio-box .bedroom img {
+    max-height: 400px;
 }

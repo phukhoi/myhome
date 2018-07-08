@@ -4,7 +4,7 @@
 * */
 get_header();
 global $maxthemes;
-$posts_per_page = 2;
+$posts_per_page = 6;
 if ( get_query_var( 'page' ) ) { 
   $page = get_query_var( 'page' ); 
 }

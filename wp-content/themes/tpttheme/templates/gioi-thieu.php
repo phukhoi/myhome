@@ -31,13 +31,15 @@
                 công hiện đại nhất, đồng thời luôn đảm bảo mang lại giải pháp hiệu quả, tiết kiệm cao và an toàn.
               </p>
             </div>
+            <br><br>
             <h4>MY HOME – GIẢI PHÁP CHUYÊN NGHIỆP VỀ NHÀ Ở</h4>
             <div class="feature-list">
                 <div class="feature-2">
                   <div class="media">
                     <div class="media-left">
                       <div class="feature-icon text-center">
-                        <i class="flaticon-drawing"></i>
+                        <!-- <i class="flaticon-drawing"></i> -->
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/pencil-icon.png" title="">
                       </div>
                     </div>
                     <div class="media-body">
@@ -52,7 +54,8 @@
                   <div class="media">
                     <div class="media-left">
                       <div class="feature-icon text-center">
-                        <i class="flaticon-construction"></i>
+                        <!-- <i class="flaticon-construction"></i> -->
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/crane-icon.png" title="">
                       </div>
                     </div>
                     <div class="media-body">
@@ -67,7 +70,8 @@
                   <div class="media">
                     <div class="media-left">
                       <div class="feature-icon text-center">
-                        <i class="flaticon-house"></i>
+                        <!-- <i class="flaticon-house"></i> -->
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/washtand-icon.png" title="">
                       </div>
                     </div>
                     <div class="media-body">
