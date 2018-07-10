@@ -45,7 +45,7 @@ $count_all = count($wpb_all_query);
         <div class="row">
             <div class="col-md-5">
                 <div class="page-title">
-                    <h1><?php the_title() ; ?></h1>
+                    <h1>THIẾT KẾ & THI CÔNG</h1>
                 </div>
             </div>
             <div class="col-md-7">

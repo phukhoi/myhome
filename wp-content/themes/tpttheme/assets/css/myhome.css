@@ -43,8 +43,10 @@ hr{
 }
 .related_topics span{
 	background: #f6d014;
-	padding: 10px 15px;
-	color: black;
+	padding: 5px 10px;
+	color: #fff;
+	text-transform: uppercase;
+	font-size: 13px;
 }
 .navbar-brand img{
 	width: 33%;
@@ -285,14 +287,18 @@ a.btn-contact{
 	color: #f6d014;	
 }
 .section-detail .feature-2 {
-    padding: 20px 0 !important;
+	padding: 20px 0 !important;
 }
 .portfolio-box .bedroom:nth-child(2n+1) {
-    clear: both;
+	clear: both;
 }
 .portfolio-box .bedroom img {
-    max-height: 400px;
+	max-height: 400px;
 }
 .lb-nav a.lb-next {
 	width: 7% !important;
+}
+.fb-like button{
+	background: black;
+	color: #fff;
 }

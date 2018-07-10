@@ -122,7 +122,7 @@ get_header();
                         <?php if($tag){?>
                         <p>
                             <?php foreach($tag as $item){?>
-                            <a href="/tag/<?php echo $item->slug; ?>">
+                            <a class="tag" href="#">
                                 <span><?php echo $item->name; ?></span>
                             </a>
                             <?php } ?>  
