@@ -18,7 +18,7 @@
                         <div class="footer-text">
                             <p class="text-uppercase">  <?php echo $title; ?></p>
                             <p><span class="text-brand-color">Địa chỉ: </span> <?php echo $address; ?></p>
-                            <p><span class="text-brand-color">Điện thoại: </span> <?php echo $phone; ?></p>
+                            <p class="hidden"><span class="text-brand-color">Điện thoại: </span> <?php echo $phone; ?></p>
                             <p><span class="text-brand-color">Email: </span> <?php echo $email; ?></p>
                             <p><span class="text-brand-color">Hotline: </span> <?php echo $hotline; ?></p>
                         </div>

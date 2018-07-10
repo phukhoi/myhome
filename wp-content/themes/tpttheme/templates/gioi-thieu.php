@@ -38,8 +38,8 @@
                   <div class="media">
                     <div class="media-left">
                       <div class="feature-icon text-center">
-                        <!-- <i class="flaticon-drawing"></i> -->
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/pencil-icon.png" title="">
+                        <i class="flaticon-drawing"></i>
+                        <img class="hidden" src="<?php echo get_template_directory_uri(); ?>/assets/images/pencil-icon.png" title="">
                       </div>
                     </div>
                     <div class="media-body">
@@ -54,8 +54,8 @@
                   <div class="media">
                     <div class="media-left">
                       <div class="feature-icon text-center">
-                        <!-- <i class="flaticon-construction"></i> -->
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/crane-icon.png" title="">
+                        <i class="flaticon-construction"></i>
+                        <img class="hidden" src="<?php echo get_template_directory_uri(); ?>/assets/images/crane-icon.png" title="">
                       </div>
                     </div>
                     <div class="media-body">
@@ -70,13 +70,13 @@
                   <div class="media">
                     <div class="media-left">
                       <div class="feature-icon text-center">
-                        <!-- <i class="flaticon-house"></i> -->
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/washtand-icon.png" title="">
+                        <i class="flaticon-house"></i>
+                        <img class="hidden" src="<?php echo get_template_directory_uri(); ?>/assets/images/washtand-icon.png" title="">
                       </div>
                     </div>
                     <div class="media-body">
                       <a href="#">
-                        <h3 class="media-heading">Cung cấp khóa, thiết bị bếp &amp; phòng tắm nhập khẩu từ USA</h3>
+                        <h3 class="media-heading">CUNG CẤP KHÓA, THIẾT BỊ BẾP &amp; PHÒNG TẮM, THIẾT BỊ CHIẾU SÁNG NHẬP KHẨU</h3>
                       </a>
                     </div>
                   </div>
@@ -110,7 +110,7 @@
               <div class="form-group">
                 <div class="col-sm-8 control-label text-left-tpt">
                   <label for="">
-                    DIỆN XÂY DỰNG ( tầng trệt )
+                    DIỆN XÂY DỰNG (tầng trệt)
                   </label>
                 </div>
                 <div class="col-sm-4 control-input">
@@ -121,7 +121,7 @@
               <div class="form-group ">
                 <div class="col-sm-8 control-label text-left-tpt">
                   <label for="">
-                    SỐ TẦNG ( bao gồm tầng trệt )
+                    SỐ TẦNG (bao gồm tầng trệt)
                   </label>
                 </div>
                 <div class="col-sm-4 control-input">
