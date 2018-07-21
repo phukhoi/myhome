@@ -23,7 +23,11 @@
                             <p><span class="text-brand-color">Hotline: </span> <?php echo $hotline; ?></p>
                         </div>
                     </div>
-                    <div class="col-md-3">
+                    <div class="col-md-3 text-right">
+                        <br/>
+                        <br/>
+                        <br/>
+                        <br/>
                         <div class="social-top">
                             <ul class="top-social">
                                 <li><a href="<?php echo $fb; ?>" target="_blank"><i class="fa fa-facebook"></i></a></li>
@@ -34,6 +38,8 @@
                                 <!-- <li><a href="#" target="_blank"><i class="fa fa-rss"></i></a></li> -->
                             </ul>
                         </div>
+                        <br/>
+                        <span class="privacy-text">Myhome ⓒ Privacy Policy</span>
                     </div>
                 </div>
             </div>
