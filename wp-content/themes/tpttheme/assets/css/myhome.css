@@ -238,7 +238,7 @@ a.btn-contact{
 	padding-top: 50px;
 }
 .blog-post .blog-img, .single-blog-post .blog-img{
-	max-height: 250px;
+	/* max-height: 250px; */
 }
 .latest-news-img img{
 	max-height: 500px;

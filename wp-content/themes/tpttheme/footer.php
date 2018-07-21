@@ -27,11 +27,11 @@
                         <div class="social-top">
                             <ul class="top-social">
                                 <li><a href="<?php echo $fb; ?>" target="_blank"><i class="fa fa-facebook"></i></a></li>
-                                <li><a href="<?php echo $twitter; ?>" target="_blank"><i class="fa fa-twitter"></i></a></li>
-                                <li><a href="<?php echo $pinterest; ?>" target="_blank"><i class="fa fa-pinterest"></i></a></li>
-                                <li><a href="<?php echo $dribbble; ?>" target="_blank"><i class="fa fa-dribbble"></i></a></li>
+                                <li><a href="<?php echo $twitter; ?>" target="_blank"><i class="fa fa-instagram"></i></a></li>
+                                <li><a href="<?php echo $pinterest; ?>" target="_blank"><i class="fa fa-google"></i></a></li>
+                                <!-- <li><a href="<?php echo $dribbble; ?>" target="_blank"><i class="fa fa-dribbble"></i></a></li> -->
                                 <li><a href="<?php echo $linkedin; ?>" target="_blank"><i class="fa fa-linkedin"></i></a></li>
-                                <li><a href="#" target="_blank"><i class="fa fa-rss"></i></a></li>
+                                <!-- <li><a href="#" target="_blank"><i class="fa fa-rss"></i></a></li> -->
                             </ul>
                         </div>
                     </div>
