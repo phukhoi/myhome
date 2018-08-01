@@ -183,7 +183,7 @@
         <div class="col-md-5">
           <h3>HÌNH ẢNH MINH HOẠ</h3>
           <div class="image-demo">
-            <img src="assets/images/others/interior-img.jpg" class="img-responsive" title="" alt="">
+            <img src="/wp-content/themes/tpttheme/assets/images/lo-gioi.jpg" class="img-responsive" title="HÌNH ẢNH MINH HOẠ" alt="HÌNH ẢNH MINH HOẠ">
           </div>
         </div>
         <div class="col-md-12 gt-description">
