@@ -41,15 +41,16 @@ hr{
 .related_topics{
 	margin-top: 15px;
 }
-.related_topics span{
-	background: #f6d014;
-	padding: 5px 10px;
-	color: #fff;
-	text-transform: uppercase;
-	font-size: 13px;
+.related_topics span {
+    background: #feb813;
+    padding: 3px 5px;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 12px;
 }
 .navbar-brand img{
-	width: 33%;
+	width: 50%;
+    margin-top: -14px;
 }
 .text-left-tpt{
 	text-align: left !important;
@@ -86,7 +87,7 @@ ul.related-posts a{
 	color: black;	
 }
 ul.related-posts a:hover{
-	color: #f6d014;	
+	color: #feb813;	
 }
 .color-black{
 	color: #999 !important;
@@ -124,8 +125,8 @@ button.addcart-link{
 }
 button.addcart-link:hover{
 	color: #fff;
-	background-color: #f6d014 !important;
-	border: 2px solid #f6d014;
+	background-color: #feb813 !important;
+	border: 2px solid #feb813;
 }
 .input-number, .button-cart{
 	padding: 0px;
@@ -169,16 +170,16 @@ textarea {
 	background-color: #fff;
 }
 #place_order:hover{
-	border: 2px solid #f6d014;
-	background: #f6d014;
+	border: 2px solid #feb813;
+	background: #feb813;
 	color: #000;
 }
 a.checkout-button{
 	text-transform: uppercase;
-	border: 2px solid #f6d014 !important;
+	border: 2px solid #feb813 !important;
 	border-radius: 0px !important;
 	color: #000 !important;
-	background-color: #f6d014 !important;
+	background-color: #feb813 !important;
 	margin-bottom: 15px !important;
 }
 a.checkout-button:hover{
@@ -186,10 +187,10 @@ a.checkout-button:hover{
 }
 .woocommerce input.button{
 	text-transform: uppercase;
-	border: 2px solid #f6d014 !important;
+	border: 2px solid #feb813 !important;
 	border-radius: 0px !important;
 	color: #000 !important;
-	background-color: #f6d014 !important;
+	background-color: #feb813 !important;
 }
 .wpcf7-form textarea {
 	min-height: 120px !important; 
@@ -212,13 +213,13 @@ ul.page-numbers li a{
 }
 ul.page-numbers li a:hover{
 	color: #fff;
-	background: #f6d014;
+	background: #feb813;
 }
 
 li span.current {
-	border: 1px solid #f6d014;
+	border: 1px solid #feb813;
 	padding: 5px 12px;
-	background: #f6d014;
+	background: #feb813;
 	color: #fff;
 }
 .item-price{
@@ -272,19 +273,19 @@ a.btn-contact{
 	color: #000;
 }
 .widget-content .post-title a:hover{
-	color: #f6d014;
+	color: #feb813;
 }
 .has-sub-cat a{
 	color: #000;
 }
 .has-sub-cat a:hover{
-	color: #f6d014;
+	color: #feb813;
 }
 .has-sub-cat.active a{
-	color: #f6d014;
+	color: #feb813;
 }
 .footer-text p:hover{
-	color: #f6d014;	
+	color: #feb813;	
 }
 .section-detail .feature-2 {
 	padding: 20px 0 !important;
@@ -301,4 +302,25 @@ a.btn-contact{
 .fb-like button{
 	background: black;
 	color: #fff;
+}
+#span_file {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    color: #999999;
+}
+.blog-img img{
+	max-height: 300px;
+}
+.single-blog-post .comment-section .comment-form textarea {
+    padding-top: 2px;
+}
+button.inlineBlock, button#u_0_2{
+	background: black;
+    border: 1px solid;
+}
+.blog-img-detail img{
+	width: 100%;
+	height: auto;
+}
+.blog-post .post-content, .single-blog-post .post-content {
+    margin-top: 30px;
 }

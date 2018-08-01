@@ -103,7 +103,7 @@
                   </label>
                 </div>
                 <div class="col-sm-4 control-input">
-                  <input type="text" class="form-control" id="" placeholder="">
+                  <input type="text" class="form-control gia_input" id="dt" name="dt" placeholder="">
                 </div>
               </div>
 
@@ -114,7 +114,7 @@
                   </label>
                 </div>
                 <div class="col-sm-4 control-input">
-                  <input type="text" class="form-control" id="" placeholder="">
+                  <input type="text" class="form-control gia_input" name="dttt" id="dttt" onkeyup="tktg()" placeholder="">
                 </div>
               </div>
 
@@ -125,7 +125,7 @@
                   </label>
                 </div>
                 <div class="col-sm-4 control-input">
-                  <input type="text" class="form-control" id="" placeholder="">
+                  <input type="text" class="form-control gia_input" name="st" id="st" onkeyup="tktg()" placeholder="">
                 </div>
               </div>
             </div>
@@ -143,47 +143,47 @@
               <tbody>
                 <tr>
                   <td class="text-center">Thiết kế trọn gói</td>
-                  <td class="text-center"></td>
-                  <td class="text-center"></td>
+                  <td class="text-center" id="thietke_ketqua"></td>
+                  <td class="text-center" id="thietke_phantram"></td>
                 </tr>
                 <tr>
                   <td class="text-center">Phần thô</td>
-                  <td class="text-center"></td>
-                  <td class="text-center"></td>
+                  <td class="text-center" id="phantho_ketqua"></td>
+                  <td class="text-center" id="phantho_phantram"></td>
                 </tr>
                 <tr>
                   <td class="text-center">Phần hoàn thiện</td>
-                  <td class="text-center"></td>
-                  <td class="text-center"></td>
+                  <td class="text-center" id = "hoanthien_ketqua"></td>
+                  <td class="text-center" id = "hoanthien_phantram"></td>
                 </tr>
                 <tr>
                   <td class="text-center">Phần nội thất</td>
-                  <td class="text-center"></td>
-                  <td class="text-center"></td>
+                  <td class="text-center" id="noithat_ketqua"></td>
+                  <td class="text-center" id="noithat_phantram"></td>
                 </tr>
                 <tr>
                   <td class="text-center">Dự phòng phí</td>
-                  <td class="text-center"></td>
-                  <td class="text-center"></td>
+                  <td class="text-center" id="duphong_ketqua"></td>
+                  <td class="text-center" id="duphong_phantram"></td>
                 </tr>
                 <tr>
                   <td class="text-center bold">TỔNG CỘNG</td>
-                  <td class="text-center"></td>
-                  <td class="text-center"></td>
+                  <td class="text-center" id="tongcong"></td>
+                  <td class="text-center" id = "tongcong_phantram"></td>
                 </tr>
               </tbody>
             </table>
             <h4 class="text-center">Lựa chọn gói thiết kế</h4>
             <div class="btn-type-design">
-              <a href="#" class="btn btn-primary--cus">Thiết kế trọn gọi</a>
-              <a href="#" class="btn btn-primary--cus">Thiết kế kiến trúc</a>
+              <a  id="tktg" onclick="tktg()" class="btn btn-primary--cus">Thiết kế trọn gói</a>
+              <a  id="tkkt" onclick="tkkt()" class="btn btn-primary--cus">Thiết kế kiến trúc</a>
             </div>
           </div>
         </div>
         <div class="col-md-5">
           <h3>HÌNH ẢNH MINH HOẠ</h3>
-          <div class="image-demo">
-            <img src="/wp-content/themes/tpttheme/assets/images/lo-gioi.jpg" class="img-responsive" title="HÌNH ẢNH MINH HOẠ" alt="HÌNH ẢNH MINH HOẠ">
+          <div class="image-demo"> 
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/others/lo-gioi.jpg" class="img-responsive" title="" alt="">
           </div>
         </div>
         <div class="col-md-12 gt-description">
@@ -199,3 +199,226 @@
     </div>
   </section>
   <?php get_footer(); ?>
+
+   <script language="javascript">
+		$(document).keyup(function(e) {
+		  if (e.keyCode == 13) { 
+		  	$("#tktg").click();
+		   }     // enter
+		});
+		function formatCurrency(num) 
+		 {
+			num = num.toString().replace(/\$|\,/g,'');
+			if(isNaN(num))
+			num = "0";
+			sign = (num == (num = Math.abs(num)));
+			num = Math.floor(num*100+0.50000000001);
+			num = Math.floor(num/100).toString();
+			for (var i = 0; i < Math.floor((num.length-(1+i))/3); i++)
+			num = num.substring(0,num.length-(4*i+3))+'.'+
+			num.substring(num.length-(4*i+3));
+			return (((sign)?'':'-') + num);
+		}
+		
+		function tktg()
+		{
+			var dtd = document.getElementById('dt').value;
+			var dttt = document.getElementById('dttt').value;
+			var st = document.getElementById('st').value;
+			var tdts = dttt * st;
+			var thietke_ketqua = tdts *250000;
+			//var phantho_ketqua = tdts * 2850000;
+			if(tdts<= 100){
+				var phantho_ketqua = tdts * 3300000 *1.5;
+			} else if(tdts<= 200){
+				var phantho_ketqua = tdts * 3300000 *1.25;
+			} else if(tdts<= 300){
+				var phantho_ketqua = tdts * 3300000 *1.15;
+			} else{
+				var phantho_ketqua = tdts * 3300000;
+			}
+			
+      /* backup */
+			// var hoanthien_ketqua = tdts * 1800000;
+			// var noithat_ketqua = (phantho_ketqua +hoanthien_ketqua)* 0.25;
+			// var duphong_ketqua = (phantho_ketqua +hoanthien_ketqua)* 0.05;
+			// var tongcong = thietke_ketqua + phantho_ketqua + hoanthien_ketqua + noithat_ketqua + duphong_ketqua;
+      /* backup */
+      var hoanthien_ketqua = tdts * 2000000;
+			var noithat_ketqua = tdts * 1500000;
+			var tongcong_temp = thietke_ketqua + phantho_ketqua + hoanthien_ketqua + noithat_ketqua;
+			var duphong_ketqua = tongcong_temp*0.03;
+      var tongcong = tongcong_temp + duphong_ketqua;
+			if(isNaN(dtd) || dtd ==""){
+				alert(" Dữ liệu chưa đúng, xin quý khách vui lòng nhập lại! ");
+				document.getElementById('dt').focus();
+				return false;
+			}
+			//if(dtd <= dttt){
+//				alert(" Dữ liệu chưa đúng, xin quý khách vui lòng nhập lại! ");
+//				document.getElementById('dttt').focus();
+//				return false;
+//			}
+			if(isNaN(dttt) || dttt ==""){
+				alert(" Dữ liệu chưa đúng, xin quý khách vui lòng nhập lại! ");
+				document.getElementById('dttt').focus();
+				return false;
+			}
+			if(isNaN(st) || st ==""){
+				alert(" Dữ liệu chưa đúng, xin quý khách vui lòng nhập lại! ");
+				document.getElementById('st').focus();
+				return false;
+			}
+			
+
+			document.getElementById("thietke_ketqua").innerHTML = formatCurrency(thietke_ketqua);
+			document.getElementById("thietke_phantram").innerHTML =Math.round(((thietke_ketqua/tongcong) * 100)*1000)/1000;
+			document.getElementById("phantho_ketqua").innerHTML = formatCurrency(phantho_ketqua);
+			document.getElementById("phantho_phantram").innerHTML =Math.round(((phantho_ketqua/tongcong) * 100)*1000)/1000;
+			document.getElementById("hoanthien_ketqua").innerHTML = formatCurrency(hoanthien_ketqua);
+			document.getElementById("hoanthien_phantram").innerHTML =Math.round(((hoanthien_ketqua/tongcong) * 100)*1000)/1000;
+			document.getElementById("noithat_ketqua").innerHTML = formatCurrency(noithat_ketqua);
+			document.getElementById("noithat_phantram").innerHTML =Math.round(((noithat_ketqua/tongcong) * 100)*1000)/1000;
+			document.getElementById("duphong_ketqua").innerHTML = formatCurrency(duphong_ketqua);
+			document.getElementById("duphong_phantram").innerHTML = 3;
+			// document.getElementById("duphong_phantram").innerHTML =Math.round(((duphong_ketqua/tongcong) * 100)*1000)/1000;
+			document.getElementById("tongcong").innerHTML = formatCurrency(tongcong);
+			document.getElementById("tongcong_phantram").innerHTML =Math.round(((tongcong/tongcong) * 100)*1000)/1000;
+
+  		}
+		function tkkt()
+		{
+			var dtd = document.getElementById('dt').value;
+			var dttt = document.getElementById('dttt').value;
+			var st = document.getElementById('st').value;
+			if(isNaN(dtd) || dtd ==""){
+				alert(" Dữ liệu chưa đúng, xin quý khách vui lòng nhập lại! ");
+				document.getElementById('dt').value="";
+				document.getElementById('dttt').value="";
+				document.getElementById('dt').focus();
+				return false;
+			} else if ( dttt*1 > dtd*1){
+				//alert(dttt);
+				document.getElementById('dttt').value="";
+				alert(" Diện tích xây dựng phải nhỏ hơn diện tích đất! ");
+				document.getElementById('dttt').focus();
+				return false;
+			}else{
+			
+				if(st==""){
+					var tdts = dttt * 1;
+				}else{
+					var tdts = dttt * st;
+				}
+			if(tdts<= 100){
+				var phantho_ketqua = tdts * 3300000 *1.5;
+			} else if(tdts<= 200){
+				var phantho_ketqua = tdts * 3300000 *1.25;
+			} else if(tdts<= 300){
+				var phantho_ketqua = tdts * 3300000 *1.15;
+			} else{
+				var phantho_ketqua = tdts * 3300000;
+			}
+			var thietke_ketqua = tdts *200000;
+			/* backup */
+			// var hoanthien_ketqua = tdts * 1800000;
+			// var noithat_ketqua = (phantho_ketqua +hoanthien_ketqua)* 0.25;
+			// var duphong_ketqua = (phantho_ketqua +hoanthien_ketqua)* 0.05;
+			// var tongcong = thietke_ketqua + phantho_ketqua + hoanthien_ketqua + noithat_ketqua + duphong_ketqua;
+      /* backup */
+      var hoanthien_ketqua = tdts * 2000000;
+			var noithat_ketqua = tdts * 1500000;
+			var tongcong_temp = thietke_ketqua + phantho_ketqua + hoanthien_ketqua + noithat_ketqua;
+			var duphong_ketqua = tongcong_temp*0.03;
+      var tongcong = tongcong_temp + duphong_ketqua;
+
+			if(isNaN(dtd) || dtd ==""){
+				alert(" Dữ liệu chưa đúng, xin quý khách vui lòng nhập lại!");
+				document.getElementById('dt').focus();
+				return false;
+			}
+			if(isNaN(dttt) || dttt ==""){
+				
+				document.getElementById('dttt').value="";
+				document.getElementById('dttt').focus();
+				//alert(" Dữ liệu chưa đúng, xin quý khách vui lòng nhập lại! ");
+				return false;
+			}
+			//if(isNaN(st) || st ==""){
+			if(isNaN(st)){
+				alert(" Dữ liệu chưa đúng, xin quý khách vui lòng nhập lại! ");
+				document.getElementById('st').value="";
+				document.getElementById('st').focus();
+				return false;
+			}
+			
+			document.getElementById("thietke_ketqua").innerHTML = formatCurrency(thietke_ketqua);
+			document.getElementById("thietke_phantram").innerHTML =Math.round(((thietke_ketqua/tongcong) * 100)*1000)/1000;
+			document.getElementById("phantho_ketqua").innerHTML = formatCurrency(phantho_ketqua);
+			document.getElementById("phantho_phantram").innerHTML =Math.round(((phantho_ketqua/tongcong) * 100)*1000)/1000;
+			document.getElementById("hoanthien_ketqua").innerHTML = formatCurrency(hoanthien_ketqua);
+			document.getElementById("hoanthien_phantram").innerHTML =Math.round(((hoanthien_ketqua/tongcong) * 100)*1000)/1000;
+			document.getElementById("noithat_ketqua").innerHTML = formatCurrency(noithat_ketqua);
+			document.getElementById("noithat_phantram").innerHTML =Math.round(((noithat_ketqua/tongcong) * 100)*1000)/1000;
+			document.getElementById("duphong_ketqua").innerHTML = formatCurrency(duphong_ketqua);
+			document.getElementById("duphong_phantram").innerHTML = 3;
+			// document.getElementById("duphong_phantram").innerHTML =Math.round(((duphong_ketqua/tongcong) * 100)*1000)/1000;
+			document.getElementById("tongcong").innerHTML = formatCurrency(tongcong);
+			document.getElementById("tongcong_phantram").innerHTML =Math.round(((tongcong/tongcong) * 100)*1000)/1000;
+	
+  		}
+		}
+		// function tknt()
+		// {
+		// 	var dtd = document.getElementById('dt').value;
+		// 	var dttt = document.getElementById('dttt').value;
+		// 	var st = document.getElementById('st').value;
+		// 	var tdts = dttt * st;
+		// 	var thietke_ketqua = tdts *150000;
+		// 	//var phantho_ketqua = tdts * 2850000;
+		// 	if(tdts<= 100){
+		// 		var phantho_ketqua = tdts * 3000000 *1.5;
+		// 	} else if(tdts<= 200){
+		// 		var phantho_ketqua = tdts * 3000000 *1.25;
+		// 	} else if(tdts<= 300){
+		// 		var phantho_ketqua = tdts * 3000000 *1.15;
+		// 	} else{
+		// 		var phantho_ketqua = tdts * 3000000;
+		// 	}
+		// 	var hoanthien_ketqua = tdts * 1800000;
+		// 	var noithat_ketqua = (phantho_ketqua +hoanthien_ketqua)* 0.25;
+		// 	var duphong_ketqua = (phantho_ketqua +hoanthien_ketqua)* 0.05;
+		// 	var tongcong = thietke_ketqua + phantho_ketqua + hoanthien_ketqua + noithat_ketqua + duphong_ketqua;
+						
+		// 	if(isNaN(dtd) || dtd ==""){
+		// 		alert(" Dữ liệu chưa đúng, xin quý khách vui lòng nhập lại! ");
+		// 		document.getElementById('dt').focus();
+		// 		return false;
+		// 	}
+		// 	if(isNaN(dttt) || dttt ==""){
+		// 		alert(" Dữ liệu chưa đúng, xin quý khách vui lòng nhập lại! ");
+		// 		document.getElementById('dttt').focus();
+		// 		return false;
+		// 	}
+		// 	if(isNaN(st) || st ==""){
+		// 		alert(" Dữ liệu chưa đúng, xin quý khách vui lòng nhập lại! ");
+		// 		document.getElementById('st').focus();
+		// 		return false;
+		// 	}
+			
+		// 	document.getElementById("thietke_ketqua").innerHTML = formatCurrency(thietke_ketqua);
+		// 	document.getElementById("thietke_phantram").innerHTML =Math.round(((thietke_ketqua/tongcong) * 100)*1000)/1000;
+		// 	document.getElementById("phantho_ketqua").innerHTML = formatCurrency(phantho_ketqua);
+		// 	document.getElementById("phantho_phantram").innerHTML =Math.round(((phantho_ketqua/tongcong) * 100)*1000)/1000;
+		// 	document.getElementById("hoanthien_ketqua").innerHTML = formatCurrency(hoanthien_ketqua);
+		// 	document.getElementById("hoanthien_phantram").innerHTML =Math.round(((hoanthien_ketqua/tongcong) * 100)*1000)/1000;
+		// 	document.getElementById("noithat_ketqua").innerHTML = formatCurrency(noithat_ketqua);
+		// 	document.getElementById("noithat_phantram").innerHTML =Math.round(((noithat_ketqua/tongcong) * 100)*1000)/1000;
+		// 	document.getElementById("duphong_ketqua").innerHTML = formatCurrency(duphong_ketqua);
+		// 	document.getElementById("duphong_phantram").innerHTML =Math.round(((duphong_ketqua/tongcong) * 100)*1000)/1000;
+		// 	document.getElementById("tongcong").innerHTML = formatCurrency(tongcong);
+		// 	document.getElementById("tongcong_phantram").innerHTML =Math.round(((tongcong/tongcong) * 100)*1000)/1000;
+			
+  	// 	}
+</script>
+    

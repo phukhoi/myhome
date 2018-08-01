@@ -83,7 +83,7 @@ ul.ul-phongthuy li{
 	<div class="container">
 		<div class="col-md-12">
 			<div id="exTab1">	
-				<ul  class="nav nav-pills ul-phongthuy">
+				<ul  class="nav nav-pills ul-phongthuy hidden">
 					<li class="active">
 						<a  href="#1a" data-toggle="tab">Thước lỗ ban 52.2 cm</a>
 					</li>

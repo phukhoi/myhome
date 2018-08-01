@@ -69,6 +69,7 @@ $count_all = count($wpb_all_query);
                     <div class="blog-post">
                         <div class="col-md-6 col-xs-12">
                             <div class="blog-img">
+                                <a href="<?php echo get_permalink( $post->ID ); ?>">
                                 <?php
                                 $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), "single-post-thumbnail" );
                                 if(empty($image[0])){
@@ -77,8 +78,9 @@ $count_all = count($wpb_all_query);
                                 ?>
                                 <img src="<?php echo $image[0]; ?>?v=1.1" class="img-responsive" alt="<?php echo esc_html( $post->post_title ); ?>">
                                 <div class="img-overlay">
-                                    <a href="<?php echo get_permalink( $post->ID ); ?>"><i class="fa fa-link"></i></a>
+                                    <i class="fa fa-link"></i>
                                 </div>
+                                </a>
                             </div>
                         </div>
                         <div class="col-md-6 col-xs-12">

@@ -37,7 +37,7 @@ get_header();
             <div class="row">
                 <div class="col-md-8">
                     <div class="single-blog-post">
-                        <div class="blog-img">
+                        <div class="blog-img-detail">
                             <img src="<?php echo $image[0]; ?>" class="img-responsive" alt="<?php the_title() ; ?>">
                             <div class="img-overlay hidden">
                                 <a href="#"><i class="fa fa-link"></i></a>
@@ -82,6 +82,12 @@ get_header();
                                         </div>
                                     </div>
                                 <?php endif; ?>
+                            </div>
+                        </div>
+                        <div class="blog-img-detail">
+                            <img src="<?php echo $image[0]; ?>" class="img-responsive" alt="<?php the_title() ; ?>">
+                            <div class="img-overlay hidden">
+                                <a href="#"><i class="fa fa-link"></i></a>
                             </div>
                         </div>
                     </div>
