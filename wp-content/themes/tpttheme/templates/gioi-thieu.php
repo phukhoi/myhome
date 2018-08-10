@@ -114,7 +114,7 @@
                   </label>
                 </div>
                 <div class="col-sm-4 control-input">
-                  <input type="text" class="form-control gia_input" name="dttt" id="dttt" onkeyup="tktg()" placeholder="">
+                  <input type="text" class="form-control gia_input" name="dttt" id="dttt" placeholder="">
                 </div>
               </div>
 
@@ -125,7 +125,7 @@
                   </label>
                 </div>
                 <div class="col-sm-4 control-input">
-                  <input type="text" class="form-control gia_input" name="st" id="st" onkeyup="tktg()" placeholder="">
+                  <input type="text" class="form-control gia_input" name="st" id="st" placeholder="">
                 </div>
               </div>
             </div>
@@ -202,10 +202,28 @@
 
    <script language="javascript">
 		$(document).keyup(function(e) {
-		  if (e.keyCode == 13) { 
-		  	$("#tktg").click();
-		   }     // enter
+      var dtd = document.getElementById('dt').value;
+			var dttt = document.getElementById('dttt').value;
+			var st = document.getElementById('st').value;
+      
+		  // if (e.keyCode == 13 ) { 
+		  	// $("#tktg").click();
+          if( !isNaN(dtd) && dtd !="" && !isNaN(dttt) && dttt !="" && !isNaN(st) && st !=""){
+              // $("#tktg").click();
+              tktg();
+        }
+		  //  }     // enter
 		});
+    $(".gia_input").on('change', function(){
+      console.log('change');
+      // var dtd = document.getElementById('dt').value;
+			// var dttt = document.getElementById('dttt').value;
+			// var st = document.getElementById('st').value;
+      // if( !isNaN(dtd) && dtd !="" && !isNaN(dttt) && dttt !="" && !isNaN(st) && st !=""){
+      //     	// $("#tktg").click();
+      //       tktg();
+      // }
+    })
 		function formatCurrency(num) 
 		 {
 			num = num.toString().replace(/\$|\,/g,'');
@@ -222,6 +240,7 @@
 		
 		function tktg()
 		{
+      console.log('onkey');
 			var dtd = document.getElementById('dt').value;
 			var dttt = document.getElementById('dttt').value;
 			var st = document.getElementById('st').value;
@@ -249,7 +268,7 @@
 			var tongcong_temp = thietke_ketqua + phantho_ketqua + hoanthien_ketqua + noithat_ketqua;
 			var duphong_ketqua = tongcong_temp*0.03;
       var tongcong = tongcong_temp + duphong_ketqua;
-			if(isNaN(dtd) || dtd ==""){
+			if(isNaN(dtd) || dtd =="" ){
 				alert(" Dữ liệu chưa đúng, xin quý khách vui lòng nhập lại! ");
 				document.getElementById('dt').focus();
 				return false;
