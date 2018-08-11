@@ -150,6 +150,8 @@ get_header();
         //facebook function
         var url = window.location.href;
         $('.fb-like').attr('data-href', url);
+        
+        $(".lb-nav") .prepend("<div style='position:relative;top:-15px;color:white;font-weight: bold'>"+ $('.page-title h1').html().toUpperCase() +"</div>"); 
     });
 </script>
 <?php get_footer(); ?>
