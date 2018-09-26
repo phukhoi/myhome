@@ -26,7 +26,7 @@ class enqueue
 		wp_enqueue_style('owl-transitions', MAXTHEMES_URI_ASSET . 'css/owl.transitions.css');
 		wp_enqueue_style('style', MAXTHEMES_URI_ASSET . 'css/style.css?v=1.1');
 		wp_enqueue_style('responsive', MAXTHEMES_URI_ASSET . 'css/responsive.css?v=1.1');
-		wp_enqueue_style('myhome', MAXTHEMES_URI_ASSET . 'css/myhome.css?v=1.1');
+		wp_enqueue_style('myhome', MAXTHEMES_URI_ASSET . 'css/myhome.css?v=1.2');
 		wp_enqueue_style( 'custom-css', MAXTHEMES_URI_ASSET . 'css/custom-css.css?v=1.1',false,'1.1','all');
 	}
 	public function addScripts()
