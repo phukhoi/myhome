@@ -576,14 +576,14 @@ blockquote {
         position: inherit; }
         .navbar.navbar-default .navbar-nav > li > a {
           color: #333;
-          font-size: 15px;
+          font-size: 14px;
           font-weight: 600;
           text-transform: uppercase;
           transition: all 0.2s ease-in-out;
           -moz-transition: all 0.2s ease-in-out;
           -webkit-transition: all 0.2s ease-in-out;
           -o-transition: all 0.2s ease-in-out;
-          padding: 30px 20px; }
+          padding: 50px 20px; }
           .navbar.navbar-default .navbar-nav > li > a:hover, .navbar.navbar-default .navbar-nav > li > a.active {
             color: #feb813 !important; }
       .navbar.navbar-default .navbar-nav li.drop {
