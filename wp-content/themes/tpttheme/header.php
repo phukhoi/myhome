@@ -9,7 +9,7 @@
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <title>
-            <?php wp_title('|', true, 'right'); ?>
+            Myhome - <?php wp_title('|', true, 'right'); ?>
         </title>
         <meta name="author" content="">
         <meta name="description" content="">

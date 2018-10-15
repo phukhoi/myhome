@@ -7,7 +7,8 @@
    $post_id = get_the_ID();
    $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post_id ), "single-post-thumbnail" );
    ?>
-  <section class="pad-t80">
+  <section class="pad-t120">
+    <div class="grey-bg-row"></div>
     <div class="container">
       <div class="row mb60">
         <div class="col-md-6 col-sm-6">
@@ -151,13 +152,13 @@
                   <td class="text-center" id="phantho_ketqua"></td>
                   <td class="text-center" id="phantho_phantram"></td>
                 </tr>
-                <tr>
+                <tr id="tr-hoanthien">
                   <td class="text-center">Phần hoàn thiện</td>
                   <td class="text-center" id = "hoanthien_ketqua"></td>
                   <td class="text-center" id = "hoanthien_phantram"></td>
                 </tr>
-                <tr>
-                  <td class="text-center">Phần nội thất</td>
+                <tr id="tr-phanmoc">
+                  <td class="text-center">Phần mộc</td>
                   <td class="text-center" id="noithat_ketqua"></td>
                   <td class="text-center" id="noithat_phantram"></td>
                 </tr>
@@ -175,8 +176,8 @@
             </table>
             <h4 class="text-center">Lựa chọn gói thiết kế</h4>
             <div class="btn-type-design">
-              <a  id="tktg" onclick="tktg()" class="btn btn-primary--cus">Thiết kế trọn gói</a>
-              <a  id="tkkt" onclick="tkkt()" class="btn btn-primary--cus">Thiết kế kiến trúc</a>
+              <a  id="btnThiCongPhanTho" onclick="handleButtonClick('btnThiCongPhanTho')" class="btn btn-primary--cus">Thi công phần thô</a>
+              <a  id="btnThiCongHoanThien" onclick="handleButtonClick('btnThiCongHoanThien')" class="btn btn-primary--cus active">Thi công hoàn thiện</a>
             </div>
           </div>
         </div>
@@ -188,7 +189,7 @@
         </div>
         <div class="col-md-12 gt-description">
           <p>CHÚ Ý: Phần báo giá này chỉ áp dụng cho địa bàn TP. HCM, nếu quý khách thuộc Tỉnh Thành khác, xin vui lòng liên hệ
-            qua email.</br>
+            qua email: <a href="mailto:info.myhomevn@gmail.com"></a></br>
             Đơn giá thiết kế này áp dụng cho thể loại công trình nhà ở xây mới. Dự toán phần thô được áp dụng trong khu đất nằm trong
             khu vực dễ thi công (lộ giới đường trên 4m) và phần hoàn thiện được áp dụng mức giá vật tư thiết bị đạt mức trung
             bình của thị trường.</br>
@@ -210,7 +211,7 @@
 		  	// $("#tktg").click();
           if( !isNaN(dtd) && dtd !="" && !isNaN(dttt) && dttt !="" && !isNaN(st) && st !=""){
               // $("#tktg").click();
-              tktg();
+              thiconghoanthien();
         }
 		  //  }     // enter
 		});
@@ -224,6 +225,24 @@
       //       tktg();
       // }
     })
+
+    function handleButtonClick(id){
+      
+      $(".btn-primary--cus").each(function() {
+          $(this).removeClass('active');
+      });
+
+      $('#'+id).addClass('active');
+
+      if( $('#btnThiCongPhanTho').hasClass('active') ){
+        thicongphantho();
+      }
+      if( $('#btnThiCongHoanThien').hasClass('active') ){
+        thiconghoanthien();
+      }
+      
+    }
+
 		function formatCurrency(num) 
 		 {
 			num = num.toString().replace(/\$|\,/g,'');
@@ -238,8 +257,14 @@
 			return (((sign)?'':'-') + num);
 		}
 		
-		function tktg()
+		function thicongphantho()
 		{
+      if(!$('#tr-hoanthien').hasClass('hidden')){
+        $('#tr-hoanthien').addClass('hidden');
+      }
+      if(!$('#tr-phanmoc').hasClass('hidden')){
+        $('#tr-phanmoc').addClass('hidden');
+      }
       console.log('onkey');
 			var dtd = document.getElementById('dt').value;
 			var dttt = document.getElementById('dttt').value;
@@ -264,7 +289,9 @@
 			// var tongcong = thietke_ketqua + phantho_ketqua + hoanthien_ketqua + noithat_ketqua + duphong_ketqua;
       /* backup */
       var hoanthien_ketqua = tdts * 2000000;
-			var noithat_ketqua = tdts * 1500000;
+        hoanthien_ketqua = 0;
+      var noithat_ketqua = tdts * 1500000;
+        noithat_ketqua = 0;
 			var tongcong_temp = thietke_ketqua + phantho_ketqua + hoanthien_ketqua + noithat_ketqua;
 			var duphong_ketqua = tongcong_temp*0.03;
       var tongcong = tongcong_temp + duphong_ketqua;
@@ -305,8 +332,14 @@
 			document.getElementById("tongcong_phantram").innerHTML =Math.round(((tongcong/tongcong) * 100)*1000)/1000;
 
   		}
-		function tkkt()
+		function thiconghoanthien()
 		{
+      if($('#tr-hoanthien').hasClass('hidden')){
+        $('#tr-hoanthien').removeClass('hidden');
+      }
+      if($('#tr-phanmoc').hasClass('hidden')){
+        $('#tr-phanmoc').removeClass('hidden');
+      }
 			var dtd = document.getElementById('dt').value;
 			var dttt = document.getElementById('dttt').value;
 			var st = document.getElementById('st').value;

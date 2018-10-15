@@ -79,16 +79,26 @@ $count_all = count($wpb_all_query);
                                 <div class="hover-box">
                                     <div class="inner-hover">
                                         <h4><?php echo esc_html( $post->post_title ); ?></h4>
-                                        <a class="zoom img" href="<?php echo $image[0]; ?>?v=1.1" data-lightbox="portfolio-1" data-title="<?php echo ( $post->post_title ); ?>">
+                                        <a class="zoom img <?php echo 'zoom'.$post->ID ?>" href="<?php echo $image[0]; ?>?v=1.1" data-lightbox="portfolio-1" data-title="<?php echo ( $post->post_title ); ?>">
                                             <img class="gallery-hover-icon" src="<?php echo get_template_directory_uri().'/assets/images/icon/gallery-icon.png' ?>" alt="<?php echo esc_html( $post->post_title ); ?>">   
                                         </a>
-                                        <a class="zoom title" href="<?php echo get_permalink( $post->ID ); ?>" data-title="<?php echo ( $post->post_title ); ?>">
+                                        <a class="zoom title <?php echo 'zoom'.$post->ID ?>" href="<?php echo $image[0]; ?>?v=1.1" data-lightbox="portfolio-1" data-title="<?php echo ( $post->post_title ); ?>" data-title="<?php echo ( $post->post_title ); ?>">
                                             <p>Xem thêm</p> 
                                         </a>
                                         
                                     </div>                      
                                 </div>
                             </div>
+                            <script type="text/javascript">
+                            $( document ).ready(function() {
+                                $('.zoom<?php echo $post->ID ?>').on('click', function(){
+                                    $(".lb-outerContainer").prepend("<div style='position:relative;top:-15px;color:white;font-weight: bold' class='popup-title'></div>"); 
+                                    $('.popup-title').html('');
+                                    $('.lb-caption').html('');
+                                    $('.popup-title').html('<?php echo get_the_title(); ?>'.toUpperCase());
+                                })        
+                            });
+                        </script>
                         </div> 
                     <?php endforeach; wp_reset_postdata();?>
                 </div>

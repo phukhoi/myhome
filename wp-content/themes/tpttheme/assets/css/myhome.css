@@ -8,14 +8,14 @@
 
 .header-breadcrumb{
 	background-size: 100% 100%;
-	background-size: 100% 100%;
+	background-size: cover;
 	background-repeat: no-repeat;
 	margin-top: 80px !important;
-	height: 170px !important;
+	height: 300px;
 	width: 100%;
 }
 .header-breadcrumb .page-title h1{
-	padding-top: 70px;
+	padding-top: 100px;
 }
 
 .text-uppercase{
@@ -49,7 +49,7 @@ hr{
     font-size: 12px;
 }
 .navbar-brand img{
-	width: 70%;
+	width: 90%;
     margin-top: -14px;
 }
 .text-left-tpt{
@@ -251,14 +251,15 @@ a.btn-contact{
 
 .tp-leftarrow:before{
 	content: '' !important;
-	background: url('../images/icon/left-arrow-grey.png');
+	background: url('../images/icon/left-arrow.png');
 	background-size: 30px !important;
 	background-position: center left;
 	background-repeat: no-repeat;
 }
+
 .tp-rightarrow:before{
 	content: '' !important;
-	background: url('../images/icon/right-arrow-grey.png');
+	background: url('../images/icon/right-arrow.png');
 	background-size: 30px !important;
 	background-position: center right;
 	background-repeat: no-repeat;
@@ -324,22 +325,93 @@ button.inlineBlock, button#u_0_2{
 .blog-post .post-content, .single-blog-post .post-content {
     margin-top: 30px;
 }
-@media screen and (min-width: 768px){
+.social-top ul.top-social li a{
+	font-size: 35px;
+}
+.pad-t120{
+	padding-top: 120px;
+}
+.grey-bg-row {
+    height: 25px;
+    background: #3D3D3D;
+}
+@media screen and (max-width: 1920px){
+	.navbar.navbar-default .navbar-nav > li > a {
+		padding: 70px 20px;
+		margin-top: 0;
+		font-size: 16px;
+	}
+	.header-breadcrumb{
+		background-size: 100% 100%;
+		background-size: cover;
+		background-repeat: no-repeat;
+		margin-top: 80px !important;
+		height: 300px;
+		width: 100%;
+	}
+	.header-breadcrumb .page-title h1{
+		padding-top: 155px;
+		font-size: 30px;
+	}
+	
+}
 
-	.navbar.navbar-default .navbar-nav > li > a{
-		padding: 14px 4px;
-		
+@media screen and (max-width: 1366px){
+	.navbar.navbar-default .navbar-nav > li > a {
+		padding: 70px 20px;
+		margin-top: 0;
+		font-size: 16px;
 	}
 }
-@media screen and (min-width: 992px){
+@media screen and (max-width: 1024px){
+	.navbar.navbar-default .navbar-nav > li > a {
+		padding: 70px 10px;
+		margin-top: 0;
+		font-size: 16px;
+	}
+	.navbar-brand img {
+		width: 90%;
+		margin-top: 25px;
+	}
+	.header-breadcrumb{
+		background-size: 100% 100%;
+		background-size: cover;
+		background-repeat: no-repeat;
+		margin-top: 80px !important;
+		height: 210px;
+		width: 100%;
+	}
+	.header-breadcrumb .page-title h1{
+		padding-top: 115px;
+		font-size: 24px;
+	}
+}
+@media screen and (max-width: 992px){
 	.navbar.navbar-default .navbar-nav > li > a {
 		padding: 20px 20px;
 		margin-top: -50px;
 	}
 }
-@media screen and (min-width: 1024px){
-	.navbar.navbar-default .navbar-nav > li > a {
-		padding: 50px 20px;
-		margin-top: 0;
+@media screen and (max-width: 768px){
+
+	.navbar.navbar-default .navbar-nav > li > a{
+		padding: 55px 5px;
+    	font-size: 13px;
+	}
+	.navbar-brand img {
+		width: 65%;
+		margin-top: -7px;
+	}
+	.header-breadcrumb{
+		background-size: 100% 100%;
+		background-size: cover;
+		background-repeat: no-repeat;
+		margin-top: 80px !important;
+		height: 150px;
+		width: 100%;
+	}
+	.header-breadcrumb .page-title h1{
+		padding-top: 60px;
+		font-size: 22px;
 	}
 }

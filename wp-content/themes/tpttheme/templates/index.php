@@ -27,6 +27,7 @@ $wpb_post = get_posts($args_post);
 					<div class="col-md-12">
 						<div class="latest-news">
 							<div class="latest-news-img">
+								<a href="<?php echo get_permalink( $item->ID ); ?>">
 								<?php
 								$image = wp_get_attachment_image_src( get_post_thumbnail_id( $item->ID ), "single-post-thumbnail" );
 								if(empty($image)){
@@ -34,9 +35,10 @@ $wpb_post = get_posts($args_post);
 								}
 								?>
 								<img src="<?php echo $image[0]; ?>?v=1.1" class="img-responsive" alt="<?php echo esc_html( $item->post_title ); ?>"> 
+								</a>
 							</div>
 							<h4><a href="<?php echo get_permalink( $item->ID ); ?>"><?php echo esc_html( $item->post_title ); ?></a></h4>
-							<p><?php echo esc_html( wp_trim_words($item->post_excerpt, 30, '...') ); ?></p>
+							<a href="<?php echo get_permalink( $item->ID ); ?>" class="a-text"><p><?php echo esc_html( wp_trim_words($item->post_excerpt, 30, '...') ); ?></p></a>
 						</div>
 					</div>
 				<?php endforeach; ?>

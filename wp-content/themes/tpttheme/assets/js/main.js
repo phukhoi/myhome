@@ -75,7 +75,7 @@
             },
             responsiveLevels: [1240, 1024, 767, 480],
             gridwidth: [1170, 1170, 767, 480],
-            gridheight: [700, 700, 600, 600],
+            gridheight: [500, 500, 400, 400],
             lazyType: "none",
             shadow: 0,
             shuffle: "off",
@@ -148,9 +148,7 @@
             jQuery(".player").mb_YTPlayer();
         } catch (err) {}
 
-
-
-
+       
     });
     //dom ready end
 

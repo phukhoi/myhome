@@ -71,9 +71,11 @@ get_header();
                                                         <img src="<?php echo $image['sizes']['large']; ?>?v=1.1" alt="<?php echo esc_html( get_the_title() ); ?>">
                                                         <div class="hover-box">
                                                             <div class="inner-hover">
-                                                                <a class="zoom" href="<?php echo $image['sizes']['large']; ?>?v=1.1" data-lightbox="portfolio-1">
-                                                                    <img class="project-hover-icon" src="<?php echo get_template_directory_uri().'/assets/images/icon/gallery-icon.png' ?>" alt="Xem">
-                                                                </a>
+                                                                <div class="link-wrapper">
+                                                                    <a class="zoom" href="<?php echo $image['sizes']['large']; ?>?v=1.1" data-lightbox="portfolio-1">
+                                                                        <img class="project-hover-icon" src="<?php echo get_template_directory_uri().'/assets/images/icon/gallery-icon.png' ?>" alt="Xem">
+                                                                    </a>
+                                                                </div>
                                                             </div>                      
                                                         </div>
                                                     </div>
