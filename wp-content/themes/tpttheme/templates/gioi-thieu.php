@@ -7,7 +7,7 @@
    $post_id = get_the_ID();
    $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post_id ), "single-post-thumbnail" );
    ?>
-  <section class="pad-t120">
+  <section class="pad-t160">
     <div class="grey-bg-row"></div>
     <div class="container">
       <div class="row mb60">

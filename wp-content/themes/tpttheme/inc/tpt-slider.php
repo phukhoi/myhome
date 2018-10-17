@@ -2,7 +2,7 @@
 $wpb_slider = new WP_Query(array('post_type'=>'slider', 'post_status'=>'publish'));
 ?>
 <?php if ( $wpb_slider->have_posts() ) : ?>
-    <div class="rev_slider_wrapper fullscreen-container">
+    <div class="rev_slider_wrapper fullscreen-container" style="margin-top: 160px;">
         <div id="rev_slider_1" class="rev_slider fullscreenbanner" style="display: none;">
             <ul>
                 <?php while ( $wpb_slider->have_posts() ) : $wpb_slider->the_post(); ?>
