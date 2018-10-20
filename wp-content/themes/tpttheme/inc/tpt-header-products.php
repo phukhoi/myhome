@@ -29,11 +29,13 @@ $cats_parent = get_categories($args_parent);
                     </ul>
                 </div>
             <?php } ?>
-            <div class="col-md-6 col-xs-12">
+            <div class="col-md-6 col-md-offset-5 col-xs-12">
                 <form role="search" method="get" id="searchform" action="<?php echo esc_url( home_url( '/' ) ); ?>">
-                    <div>
-                        <input type="search" id="mySearch" name="s">
-                        <button>Search</button>
+                    <div class="input-group">
+                        <input type="search" class="form-control" id="mySearch" placeholder="" name="s">
+                        <span class="input-group-btn">
+                            <button class="btn btn-default btn-search" type="button">Tìm kiếm</button>
+                        </span>
                         <input type="hidden" value="product" name="post_type" />
                     </div>
                 </form>
