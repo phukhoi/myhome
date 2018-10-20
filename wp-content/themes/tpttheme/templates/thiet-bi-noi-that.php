@@ -30,6 +30,7 @@ $ads = get_posts($args_ads);
 // echo ('</pre>');
 ?> 
 <div id="furniture">
+    <?php get_template_part('inc/tpt', 'header-products'); ?> 
     <section id="content-products">
         <div class="container">
             <div class="row">
