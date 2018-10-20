@@ -42,15 +42,15 @@ hr{
 	margin-top: 15px;
 }
 .related_topics span {
-    background: #feb813;
-    padding: 3px 5px;
-    color: #fff;
-    text-transform: uppercase;
-    font-size: 12px;
+	background: #feb813;
+	padding: 3px 5px;
+	color: #fff;
+	text-transform: uppercase;
+	font-size: 12px;
 }
 .navbar-brand img{
 	width: 90%;
-    margin-top: -14px;
+	margin-top: -14px;
 }
 .text-left-tpt{
 	text-align: left !important;
@@ -305,25 +305,25 @@ a.btn-contact{
 	color: #fff;
 }
 #span_file {
-    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
-    color: #999999;
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+	color: #999999;
 }
 .blog-img img{
 	max-height: 300px;
 }
 .single-blog-post .comment-section .comment-form textarea {
-    padding-top: 2px;
+	padding-top: 2px;
 }
 button.inlineBlock, button#u_0_2{
 	background: black;
-    border: 1px solid;
+	border: 1px solid;
 }
 .blog-img-detail img{
 	width: 100%;
 	height: auto;
 }
 .blog-post .post-content, .single-blog-post .post-content {
-    margin-top: 30px;
+	margin-top: 30px;
 }
 .social-top ul.top-social li a{
 	font-size: 35px;
@@ -332,8 +332,38 @@ button.inlineBlock, button#u_0_2{
 	padding-top: 160px;
 }
 .grey-bg-row {
-    height: 25px;
-    background: #3D3D3D;
+	height: 25px;
+	background: #3D3D3D;
+}
+#furniture{
+	clear: both;
+	padding-top: 130px;
+	background: #3f3f3f;
+}  
+ul.cate-products{
+	text-align: center;
+	margin: 0 auto;
+	display: table;
+}
+ul.cate-products li{
+	float: left;
+	padding: 0px 37px;
+}
+ul.cate-products li a{
+	text-align: center;
+	text-transform: uppercase;
+}	
+.pro-box{
+}
+.p-content{
+
+}
+.detail-products{
+	background: #e4e5e5;
+}
+.pro-description{
+	background: #fff;
+    padding: 15px 10px;
 }
 @media screen and (max-width: 1920px){
 	.navbar.navbar-default .navbar-nav > li > a {
@@ -396,7 +426,7 @@ button.inlineBlock, button#u_0_2{
 
 	.navbar.navbar-default .navbar-nav > li > a{
 		padding: 55px 5px;
-    	font-size: 13px;
+		font-size: 13px;
 	}
 	.navbar-brand img {
 		width: 65%;

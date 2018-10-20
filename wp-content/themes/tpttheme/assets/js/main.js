@@ -3,7 +3,7 @@
 
     //when dom is ready
     $(document).ready(function() {
-
+        
 
         // on scroll Navbar Fixed and back to top show
         $(window).on('scroll', function() {
@@ -153,9 +153,6 @@
     //dom ready end
 
     
-
-    
-
     
 
 })(jQuery);
