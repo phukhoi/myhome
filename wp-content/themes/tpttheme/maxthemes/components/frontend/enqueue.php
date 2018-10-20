@@ -28,7 +28,7 @@ class enqueue
 		wp_enqueue_style('slick-theme', MAXTHEMES_URI_ASSET . 'slick/slick-theme.css');
 		wp_enqueue_style('style', MAXTHEMES_URI_ASSET . 'css/style.css?v=1.2');
 		wp_enqueue_style('responsive', MAXTHEMES_URI_ASSET . 'css/responsive.css?v=1.2');
-		wp_enqueue_style('myhome', MAXTHEMES_URI_ASSET . 'css/myhome.css?v=1.3');
+		wp_enqueue_style('myhome', MAXTHEMES_URI_ASSET . 'css/myhome.css');
 		wp_enqueue_style( 'custom-css', MAXTHEMES_URI_ASSET . 'css/custom-css.css?v=1.2',false,'1.1','all');
 	}
 	public function addScripts()
@@ -57,5 +57,6 @@ class enqueue
 		//wp_enqueue_script('jquery-core', MAXTHEMES_URI_ASSET .'js/jquery.ui.core.min.js', array(), '', true);
 		wp_enqueue_script('jquery-datepicker',MAXTHEMES_URI_ASSET . 'js/jquery-ui-1.9.2.datepicker.min.js', array(), '', true);
 		wp_enqueue_script('jquery-main', MAXTHEMES_URI_ASSET .'js/main.js', array(), '', true);
+		wp_enqueue_script('myhome', MAXTHEMES_URI_ASSET .'js/myhome.js', array(), '', true);
 	}
 }					
