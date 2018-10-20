@@ -25,6 +25,15 @@ $args_ads = array (
     'posts_per_page' => -1
 );
 $ads = get_posts($args_ads);
+//
+$args_partner = array (
+    'post_type' => 'partner',
+    'post_status' => 'publish',
+    'order' => 'DESC',
+    'orderby' => 'ID',
+    'posts_per_page' => -1
+);
+$partner = get_posts($args_partner);
 // echo ('<pre>');
 // print_r($all_left);
 // echo ('</pre>');
@@ -64,24 +73,14 @@ $ads = get_posts($args_ads);
             <?php }?>
             <div class="row">
                 <div class="partner">
-                  <div class="item">
-                      <img src="http://placehold.it/250x250" class="img-responsive"/>
-                  </div>
-                  <div class="item">
-                      <img src="http://placehold.it/250x250" class="img-responsive"/>
-                  </div>
-                  <div class="item">
-                      <img src="http://placehold.it/250x250" class="img-responsive"/>
-                  </div>
-                  <div class="item">
-                      <img src="http://placehold.it/250x250" class="img-responsive"/>
-                  </div>
-                  <div class="item">
-                      <img src="http://placehold.it/250x250" class="img-responsive"/>
-                  </div>
-                  <div class="item">
-                      <img src="http://placehold.it/250x250" class="img-responsive"/>
-                  </div>
+                    <?php if($partner){?>
+                        <?php foreach($partner as $item_partner){?>
+                            <div class="item">
+                              <img src="<?php echo get_the_post_thumbnail_url($item_partner->ID); ?>" class="img-responsive"/>
+                          </div>
+                      <?php }?>
+                  <?php }?>
+
               </div>
           </div>
       </div>
