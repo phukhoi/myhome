@@ -29,7 +29,8 @@ $cats_parent = get_categories($args_parent);
                     </ul>
                 </div>
             <?php } ?>
-            <div class="col-md-6 col-md-offset-5 col-xs-12">
+            <div class="col-xs-12">
+                <div class="col-xs-4 col-xs-offset-8 no-padding">
                 <form role="search" method="get" id="searchform" action="<?php echo esc_url( home_url( '/' ) ); ?>">
                     <div class="input-group">
                         <input type="search" class="form-control" id="mySearch" placeholder="" name="s">
@@ -39,6 +40,7 @@ $cats_parent = get_categories($args_parent);
                         <input type="hidden" value="product" name="post_type" />
                     </div>
                 </form>
+                </div>
             </div>
         </div>
     </div>

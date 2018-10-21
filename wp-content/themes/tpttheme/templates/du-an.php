@@ -65,7 +65,7 @@ $count_all = count($wpb_all_query);
         </div>
         <?php if ( $wpb_all_query) : ?> 
             <div class="row">
-                <div class="portfolio-box">
+                <div class="portfolio-box du-an-box">
                     <?php foreach ( $wpb_all_query as $post ) : setup_postdata( $post ); ?>
                         <?php
                         $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), "single-post-thumbnail" );
@@ -73,7 +73,7 @@ $count_all = count($wpb_all_query);
                             $image[0] = 'http://ttppower.com.vn/wp-content/uploads/2017/12/thumb.png';
                         }
                         ?>
-                        <div class="col-md-6 col-sm-6 bedroom">
+                        <div class="bedroom">
                             <div class="portfolio-post mb30">
                                 <img src="<?php echo $image[0]; ?>?v=1.1" alt="<?php echo esc_html( $post->post_title ); ?>">
                                 <div class="hover-box">

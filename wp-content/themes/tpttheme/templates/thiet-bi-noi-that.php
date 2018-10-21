@@ -86,11 +86,13 @@ $partner = get_posts($args_partner);
                 <div class="col-md-12 partner">
                     <?php if($partner){?>
                         <?php foreach($partner as $item_partner){?>
-                            <div class="item">
-                                <div class="partner-item">
-                                    <img src="<?php echo get_the_post_thumbnail_url($item_partner->ID); ?>" class="img-responsive partner-img"/>
+                            <!-- <div class="border"> -->
+                                <div class="item">
+                                    <div class="partner-item">
+                                        <img src="<?php echo get_the_post_thumbnail_url($item_partner->ID); ?>" class="img-responsive partner-img"/>
+                                    </div>
                                 </div>
-                            </div>
+                            <!-- </div> -->
                         <?php }?>
                     <?php }?>
                 </div>
