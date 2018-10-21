@@ -249,7 +249,50 @@ a.checkout-button:hover {
 .pro-box:nth-child(3n+1) {
 	clear: both;
 }
-
+.pro-box{
+	padding: 20px 15px;
+    height: 100%;
+    margin-bottom: 10px;
+    height: 370px;
+}
+.p-content{
+	padding: 20px 5px;
+    background: #fff;
+    height: 100%;
+    position: relative;
+}
+.pro-title a:hover{
+	color: #f6d113;
+}
+.pro-title a{
+	color: #000;
+}
+.pro-title h5{
+	text-transform: initial;
+}
+.pro-price{
+	color: #feb813;
+}
+.hotline{
+	position: relative;
+	padding-left: 40px;
+}
+.hotline span{
+	font-size: 25px;
+    font-weight: 600;
+    color: #feb813;
+    line-height: 30px;
+}
+.hotline .fa{
+	font-size: 73px;
+    width: 36px;
+    height: 36px;
+    line-height: 36px;
+    color: #feb813;
+    position: absolute;
+    left: 0;
+    top: 9px;
+}
 ul.page-numbers {
 	text-align: center;
 }
@@ -279,6 +322,7 @@ li span.current {
 
 .item-price {
 	margin: 10px 0px;
+	color: #FEB813;
 }
 
 .item-price span {
@@ -486,7 +530,68 @@ ul.cate-products li a:hover {
 	background: #fff;
 	padding: 15px 10px;
 }
-
+#content-products grey-bg{
+	background-color: #E4E6E5 !important;
+}
+.grey-bg{
+	background: #E4E6E5 !important;
+}
+.item-pro{
+	padding: 20px 15px;
+	background: #fff;
+	height: 100%;
+	position: relative;
+}
+.item-title-pro{
+	padding: 0px 0 10px 0;
+}
+.item-title-pro a:hover{
+	color: #f6d113;
+}
+.item-title-pro a{
+	color: #000;
+}
+.item-title-pro h4{
+	text-transform: initial;
+}
+.item-pro-link{
+    position: absolute;
+    bottom: 10px;
+    right: 20px;
+}
+.read-more{
+	color: #FEB813;
+}
+.ads-container{
+	padding: 10px 0;
+}
+.no-padding{
+	padding: 0;
+}
+.header-text a{
+	color: #000;
+}
+.header-text{
+	padding: 25px 10px;
+}
+.item-pro-wrapper{
+	margin-bottom: 10px;
+	height: 425px;
+}
+.item-pro-image{
+	width: 100%;
+}
+.partner{
+	display: inline-block;
+	height: 220px;
+}
+.partner .item{
+	display: inline-block;
+	position: relative;
+}
+.partner-img{
+	/* position: absolute; */
+}
 @media screen and (max-width: 1920px) {
 	.navbar.navbar-default .navbar-nav>li>a {
 		padding: 70px 20px;
