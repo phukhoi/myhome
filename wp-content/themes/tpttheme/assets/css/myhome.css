@@ -592,6 +592,9 @@ ul.cate-products li a:hover {
 .partner-img{
 	/* position: absolute; */
 }
+.header_products{
+	padding-bottom: 20px;
+}
 @media screen and (max-width: 1920px) {
 	.navbar.navbar-default .navbar-nav>li>a {
 		padding: 70px 20px;
