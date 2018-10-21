@@ -462,7 +462,7 @@ button#u_0_2 {
 }
 
 .grey-bg-row {
-	height: 25px;
+	height: 10px;
 	background: #3D3D3D;
 }
 
@@ -471,7 +471,12 @@ button#u_0_2 {
 	padding-top: 170px;
 	background: #3f3f3f;
 }
-
+.portfolio-post:hover .hover-box{
+	opacity: 0.9 !important;
+}
+.portfolio-post .hover-box{
+    background: #33322e !important;
+}
 ul.cate-products {
 	text-align: center;
 	margin: 0 auto;
