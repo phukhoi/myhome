@@ -197,8 +197,10 @@ $ads = get_posts($args_ads);
                 <div class="col-md-12 partner">
                     <?php if($partner){?>
                         <?php foreach($partner as $item_partner){?>
-                            <div class="col-xs-4 col-md-2 item">
-                                <img src="<?php echo get_the_post_thumbnail_url($item_partner->ID); ?>" class="img-responsive partner-img"/>
+                            <div class="item">
+                                <div class="partner-item">
+                                    <img src="<?php echo get_the_post_thumbnail_url($item_partner->ID); ?>" class="img-responsive partner-img"/>
+                                </div>
                             </div>
                         <?php }?>
                     <?php }?>

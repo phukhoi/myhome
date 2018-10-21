@@ -583,11 +583,16 @@ ul.cate-products li a:hover {
 }
 .partner{
 	display: inline-block;
-	height: 220px;
+	padding: 20px 0;
+	background: #fff;
 }
 .partner .item{
 	display: inline-block;
-	position: relative;
+    position: relative;
+    width: 16%;
+    font-size: 0;
+    padding: 0 10px;
+    vertical-align: middle;
 }
 .partner-img{
 	/* position: absolute; */
@@ -702,5 +707,11 @@ ul.cate-products li a:hover {
 @media screen and (max-width: 767px) {
 	.navbar-default .navbar-brand img {
 		width: 15%;
+	}
+}
+@media screen and (max-width: 480px) {
+	.partner .item{
+		width: 32%;
+		margin-bottom: 30px;
 	}
 }
