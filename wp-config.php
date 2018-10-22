@@ -59,12 +59,15 @@ define('NONCE_SALT',       ',:jP2>cmG00<,]+w1DF){39^2!0Z>2]d) kQISk/=.{.b6OI[),q
 
 /**#@-*/
 define('FS_METHOD','direct');
-define( 'WP_MAX_MEMORY_LIMIT', '256M' );
-define( 'WP_MEMORY_LIMIT', '64M' );
+define('WP_MEMORY_LIMIT', '96M');
+define( 'WP_POST_REVISIONS', 1 );
+//define('DISALLOW_FILE_MODS',true);
+//define('DISALLOW_FILE_EDIT',true);
 define('AUTOMATIC_UPDATER_DISABLED', true);
 define('WP_AUTO_UPDATE_CORE', false);
 define('WP_SITEURL', 'http://' . $_SERVER['HTTP_HOST']);
 define('WP_HOME',    'http://' . $_SERVER['HTTP_HOST']);
+
 /**
  * WordPress Database Table prefix.
  *
@@ -85,7 +88,7 @@ $table_prefix  = 'tpt_';
  *
  * @link https://codex.wordpress.org/Debugging_in_WordPress
  */
-define('WP_DEBUG', false);
+define('WP_DEBUG', true);
 
 /* That's all, stop editing! Happy blogging. */
 
