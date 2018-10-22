@@ -33,7 +33,7 @@ $cats_parent = get_categories($args_parent);
                 </div>
             <?php } ?>
             <div class="col-xs-12">
-                <div class="col-xs-4 col-xs-offset-8 no-padding">
+                <div class="col-md-4 col-md-offset-8 col-xs-12 no-padding">
                 <form role="search" method="get" id="searchform" action="<?php echo esc_url( home_url( '/' ) ); ?>">
                     <div class="input-group">
                         <input type="search" class="form-control" id="mySearch" placeholder="" name="s">
