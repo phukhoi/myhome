@@ -21,6 +21,9 @@ $cats_parent = get_categories($args_parent);
             <?php if(isset($cats_parent)){ ?>
                 <div class="col-md-12">
                     <ul class="cate-products">
+                            <li>
+                                <a href="/thiet-bi-dien/">Thiết bị điện</a>
+                            </li>
                         <?php foreach($cats_parent as $id => $category) : ?>
                             <li>
                                 <a href="<?php echo get_term_link( $category->cat_ID ,'product_cat') ?>"><?php echo $category->name;?></a>
