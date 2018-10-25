@@ -11,34 +11,32 @@ $wpb_duan = new WP_Query(array('post_type'=>'duan', 'post_status'=>'publish'));
             </div>
             <div class="row owl-scroll">
                 <?php while ( $wpb_duan->have_posts() ) : $wpb_duan->the_post(); ?>
+                    <?php 
+                    $gallery = get_field('gallery_fields'); 
+                    $img_first = isset($gallery[0]['url']) && !empty($gallery[0]['url']) ? $gallery[0]['url'] : get_the_post_thumbnail_url($post->ID);
+                    ?>
                     <?php if ( has_post_thumbnail() ) { ?>
                         <div class="col-md-12">
                             <div class="running-project-2">
                                 <img class="img-responsive" src="<?php echo get_the_post_thumbnail_url($post->ID); ?>" alt="<?php echo esc_html( get_the_title() ); ?>">
                                 <div class="project-details">
                                     <h4><?php echo esc_html( get_the_title() ); ?></h4> 
-                                    <a class="zoom img <?php echo 'zoom'.$post->ID ?>" href="<?php echo $image[0]; ?>?v=1.1" data-lightbox="portfolio-1" data-title="<?php echo ( $post->post_title ); ?>">
+                                    <a class="fancybox zoom img" href="<?php echo $img_first; ?>?v=1.1" title="<?php echo ( $post->post_title ); ?>" data-fancybox="gallery-<?php echo ( $post->ID ); ?>" href="<?php echo $img_first; ?>">
                                         <img class="gallery-hover-icon project-hover-icon" src="<?php echo get_template_directory_uri().'/assets/images/icon/gallery-icon.png' ?>" alt="<?php echo esc_html( $post->post_title ); ?>">   
                                     </a>
-                                    <a class="zoom title <?php echo 'zoom'.$post->ID ?>" href="<?php echo $image[0]; ?>?v=1.1" data-lightbox="portfolio-1" data-title="<?php echo ( $post->post_title ); ?>" data-title="<?php echo ( $post->post_title ); ?>">
-                                        <p>Xem thêm</p> 
-                                    </a>
                                 </div>
-                            </div>
-                        </div> 
-                        <script type="text/javascript">
-                            $( document ).ready(function() {
-                                $('.zoom<?php echo $post->ID ?>').on('click', function(){
-                                    $(".lb-outerContainer").prepend("<div style='position:relative;top:-15px;color:white;font-weight: bold' class='popup-title'></div>"); 
-                                    $('.popup-title').html('');
-                                    $('.lb-caption').html('');
-                                    $('.popup-title').html('<?php echo get_the_title(); ?>'.toUpperCase());
-                                })        
-                            });
-                        </script>
-                    <?php } ?>
-                <?php endwhile; wp_reset_postdata();?>
-            </div>
+                                <?php if(isset($gallery) && !empty($gallery)) {?>
+                                    <div class="hidden">
+                                       <?php for($i = 1 ; $i<count($gallery); $i++){?>
+                                        <a class="fancybox"  data-fancybox="gallery-<?php echo ( $post->ID ); ?>" href="<?php echo $gallery[$i]['url'];?>"><img src="<?php echo $gallery[$i]['url'];?>" alt="<?php echo $item['title'];?>"/></a>
+                                    <?php }?> 
+                                </div>
+                            <?php }?>
+                        </div>
+                    </div> 
+                <?php } ?>
+            <?php endwhile; wp_reset_postdata();?>
         </div>
-    </section>
+    </div>
+</section>
 <?php endif; ?>
