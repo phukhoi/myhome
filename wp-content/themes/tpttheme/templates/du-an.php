@@ -78,7 +78,7 @@ $count_all = count($wpb_all_query);
                                     <div class="hover-box">
                                         <div class="inner-hover">
                                             <h4><?php echo esc_html( $post->post_title ); ?></h4>
-                                            <a role="button" class="zoom img fancybox" title="<?php echo ( $post->post_title ); ?>"  data-fancybox="gallery-<?php echo ( $post->ID ); ?>" href="<?php echo $img_first; ?>">
+                                            <a role="button" class="zoom img fancybox" title="<?php echo ( $post->post_title ); ?>"  data-fancybox="gallery-<?php echo ( $post->ID ); ?>" href="<?php echo $img_first; ?>" title="<?php echo esc_html( $post->post_title ); ?>">
                                                 <img class="gallery-hover-icon" src="<?php echo get_template_directory_uri().'/assets/images/icon/gallery-icon.png' ?>" alt="<?php echo esc_html( $post->post_title ); ?>">   
                                             </a>
                                             <a role="button" class="hidden zoom title fancybox" title="<?php echo ( $post->post_title ); ?>">
@@ -88,7 +88,7 @@ $count_all = count($wpb_all_query);
                                         <?php if(isset($gallery) && !empty($gallery)) {?>
                                             <div class="hidden">
                                              <?php for($i = 1 ; $i<count($gallery); $i++){?>
-                                                <a class="fancybox"  data-fancybox="gallery-<?php echo ( $post->ID ); ?>" href="<?php echo $gallery[$i]['url'];?>"><img src="<?php echo $gallery[$i]['url'];?>" alt="<?php echo $item['title'];?>"/></a>
+                                                <a class="fancybox"  data-fancybox="gallery-<?php echo ( $post->ID ); ?>" href="<?php echo $gallery[$i]['url'];?>"><img src="<?php echo $gallery[$i]['url'];?>" title="<?php echo $item['title'];?>" title="<?php echo esc_html( $post->post_title ); ?>"/></a>
                                             <?php }?> 
                                         </div>
                                     <?php }?>

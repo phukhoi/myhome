@@ -552,7 +552,7 @@ if ( ! function_exists( 'woocommerce_page_title' ) ) {
 	function woocommerce_page_title( $echo = true ) {
 
 		if ( is_search() ) {
-			$page_title = sprintf( __( 'Search results: &ldquo;%s&rdquo;', 'woocommerce' ), get_search_query() );
+			$page_title = sprintf( __( 'Search results: %s ', 'woocommerce' ), get_search_query() );
 
 			if ( get_query_var( 'paged' ) ) {
 				$page_title .= sprintf( __( '&nbsp;&ndash; Page %s', 'woocommerce' ), get_query_var( 'paged' ) );
