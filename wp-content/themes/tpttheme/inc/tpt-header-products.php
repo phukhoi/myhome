@@ -14,6 +14,7 @@ $args_parent = array(
     'orderby'                  => 'ID',
 );
 $cats_parent = get_categories($args_parent);
+$s = isset($_GET['s']) && !empty($_GET['s']) ? $_GET['s'] :'';
 ?>
 <section id ="header_products">
     <div class="container header_products">
@@ -36,7 +37,7 @@ $cats_parent = get_categories($args_parent);
                 <div class="col-md-4 col-md-offset-8 col-xs-12 no-padding">
                 <form role="search" method="get" id="searchform" action="<?php echo esc_url( home_url( '/' ) ); ?>">
                     <div class="input-group">
-                        <input type="search" class="form-control" id="mySearch" placeholder="" name="s">
+                        <input type="search" class="form-control" id="mySearch" placeholder="" name="s" value="<?php echo $s ?>">
                         <span class="input-group-btn">
                             <button class="btn btn-default btn-search" type="submit">Tìm kiếm</button>
                         </span>
