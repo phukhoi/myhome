@@ -17,16 +17,14 @@ $wpb_duan = new WP_Query(array('post_type'=>'duan', 'post_status'=>'publish'));
                     ?>
                     <?php if ( has_post_thumbnail() ) { ?>
                         <div class="col-md-12">
-                            <div class="running-project-2 box<?php echo $post->ID ?>">
-                                <h4><?php echo esc_html( get_the_title() ); ?></h4> 
-                                <a class="fancybox zoom img" href="<?php echo $img_first; ?>?v=1.1" title="<?php echo ( $post->post_title ); ?>" data-fancybox="gallery-<?php echo ( $post->ID ); ?>" href="<?php echo $img_first; ?>">
+                            <div class="running-project-2">
                                 <img class="img-responsive" src="<?php echo get_the_post_thumbnail_url($post->ID); ?>" alt="<?php echo esc_html( get_the_title() ); ?>">
-                                </a>
-                                <!-- <div class="project-details">
+                                <div class="project-details">
+                                    <h4><?php echo esc_html( get_the_title() ); ?></h4> 
                                     <a class="fancybox zoom img" href="<?php echo $img_first; ?>?v=1.1" title="<?php echo ( $post->post_title ); ?>" data-fancybox="gallery-<?php echo ( $post->ID ); ?>" href="<?php echo $img_first; ?>">
                                         <img class="gallery-hover-icon project-hover-icon" src="<?php echo get_template_directory_uri().'/assets/images/icon/gallery-icon.png' ?>" alt="<?php echo esc_html( $post->post_title ); ?>">   
                                     </a>
-                                </div> -->
+                                </div>
                                 <?php if(isset($gallery) && !empty($gallery)) {?>
                                     <div class="hidden">
                                        <?php for($i = 1 ; $i<count($gallery); $i++){?>
@@ -37,18 +35,6 @@ $wpb_duan = new WP_Query(array('post_type'=>'duan', 'post_status'=>'publish'));
                         </div>
                     </div> 
                 <?php } ?>
-                <script type="text/javascript">
-                $( document ).ready(function() {
-                    $('.box<?php echo $post->ID ?>').on('click', function(){
-                        $(".fancybox-image-wrap").each(function(){
-                            $(this).prepend("<div style='position:relative;top:-30px;color:white;font-weight: bold; text-align: center' class='popup-title'></div>"); 
-                            $('.popup-title').html('');
-                            $('.popup-title').html('<?php echo get_the_title(); ?>'.toUpperCase());
-                            console.log('title:', '<?php echo get_the_title(); ?>')
-                        })
-                    })        
-                });
-                </script>
             <?php endwhile; wp_reset_postdata();?>
         </div>
     </div>
