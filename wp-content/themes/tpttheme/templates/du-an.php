@@ -67,44 +67,40 @@ $count_all = count($wpb_all_query);
             <div class="row">
                 <div class="portfolio-box du-an-box">
                     <?php foreach ( $wpb_all_query as $post ) : setup_postdata( $post ); ?>
-                        <?php
-                        $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), "single-post-thumbnail" );
-                        if(empty($image[0])){
-                            $image[0] = 'http://ttppower.com.vn/wp-content/uploads/2017/12/thumb.png';
-                        }
+                        <?php 
+                        $gallery = get_field('gallery_fields'); 
+                        $img_first = isset($gallery[0]['url']) && !empty($gallery[0]['url']) ? $gallery[0]['url'] : get_the_post_thumbnail_url($post->ID);
                         ?>
-                        <div class="bedroom">
-                            <div class="portfolio-post mb30">
-                                <img src="<?php echo $image[0]; ?>?v=1.1" alt="<?php echo esc_html( $post->post_title ); ?>">
-                                <div class="hover-box">
-                                    <div class="inner-hover">
-                                        <h4><?php echo esc_html( $post->post_title ); ?></h4>
-                                        <a class="zoom img <?php echo 'zoom'.$post->ID ?>" href="<?php echo $image[0]; ?>?v=1.1" data-lightbox="portfolio-1" data-title="<?php echo ( $post->post_title ); ?>">
-                                            <img class="gallery-hover-icon" src="<?php echo get_template_directory_uri().'/assets/images/icon/gallery-icon.png' ?>" alt="<?php echo esc_html( $post->post_title ); ?>">   
-                                        </a>
-                                        <a class="zoom title <?php echo 'zoom'.$post->ID ?>" href="<?php echo $image[0]; ?>?v=1.1" data-lightbox="portfolio-1" data-title="<?php echo ( $post->post_title ); ?>" data-title="<?php echo ( $post->post_title ); ?>">
-                                            <p>Xem thêm</p> 
-                                        </a>
-                                        
-                                    </div>                      
+                        <?php if ( has_post_thumbnail() ) { ?>
+                            <div class="bedroom">
+                                <div class="portfolio-post mb30">
+                                    <img src="<?php echo get_the_post_thumbnail_url($post->ID); ?>" alt="<?php echo esc_html( $post->post_title ); ?>">
+                                    <div class="hover-box">
+                                        <div class="inner-hover">
+                                            <h4><?php echo esc_html( $post->post_title ); ?></h4>
+                                            <a role="button" class="zoom img fancybox" title="<?php echo ( $post->post_title ); ?>"  data-fancybox="gallery-<?php echo ( $post->ID ); ?>" href="<?php echo $img_first; ?>" title="<?php echo esc_html( $post->post_title ); ?>">
+                                                <img class="gallery-hover-icon" src="<?php echo get_template_directory_uri().'/assets/images/icon/gallery-icon.png' ?>" alt="<?php echo esc_html( $post->post_title ); ?>">   
+                                            </a>
+                                            <a role="button" class="hidden zoom title fancybox" title="<?php echo ( $post->post_title ); ?>">
+                                                <p>Xem thêm</p> 
+                                            </a>
+                                        </div>   
+                                        <?php if(isset($gallery) && !empty($gallery)) {?>
+                                            <div class="hidden">
+                                             <?php for($i = 1 ; $i<count($gallery); $i++){?>
+                                                <a class="fancybox"  data-fancybox="gallery-<?php echo ( $post->ID ); ?>" href="<?php echo $gallery[$i]['url'];?>"><img src="<?php echo $gallery[$i]['url'];?>" title="<?php echo $item['title'];?>" title="<?php echo esc_html( $post->post_title ); ?>"/></a>
+                                            <?php }?> 
+                                        </div>
+                                    <?php }?>
                                 </div>
                             </div>
-                            <script type="text/javascript">
-                            $( document ).ready(function() {
-                                $('.zoom<?php echo $post->ID ?>').on('click', function(){
-                                    $(".lb-outerContainer").prepend("<div style='position:relative;top:-15px;color:white;font-weight: bold' class='popup-title'></div>"); 
-                                    $('.popup-title').html('');
-                                    $('.lb-caption').html('');
-                                    $('.popup-title').html('<?php echo get_the_title(); ?>'.toUpperCase());
-                                })        
-                            });
-                        </script>
                         </div> 
-                    <?php endforeach; wp_reset_postdata();?>
-                </div>
+                    <?php } ?>
+                <?php endforeach; wp_reset_postdata();?>
             </div>
-        <?php endif; ?>
-        <?php if ($post_count> $posts_per_page){?>
+        </div>
+    <?php endif; ?>
+    <?php if ($post_count> $posts_per_page){?>
         <div class="row text-right">
             <div class="col-md-12">
                 <ul class="pagination">
@@ -114,13 +110,13 @@ $count_all = count($wpb_all_query);
                                 <i class="fa fa-angle-double-left"></i>
                             </a>
                         </li>
-                        <?php }?>
-                    <?php for($i=1;$i<=$num_pages;$i++) {?> 
-                    <?php if($i==$page){ ?>
-                    <li class="active"><a href="?page=<?php echo $i; ?>"><?php echo $i; ?></a></li> 
-                    <?php }else { ?> 
-                    <li ><a href="?page=<?php echo $i; ?>"><?php echo $i; ?></a></li> 
                     <?php }?>
+                    <?php for($i=1;$i<=$num_pages;$i++) {?> 
+                        <?php if($i==$page){ ?>
+                            <li class="active"><a href="?page=<?php echo $i; ?>"><?php echo $i; ?></a></li> 
+                        <?php }else { ?> 
+                            <li ><a href="?page=<?php echo $i; ?>"><?php echo $i; ?></a></li> 
+                        <?php }?>
                     <?php }?>
                     <?php if($page < $num_pages){?>
                         <li>
@@ -128,11 +124,11 @@ $count_all = count($wpb_all_query);
                                 <i class="fa fa-angle-double-right"></i>
                             </a>
                         </li>
-                        <?php }?> 
+                    <?php }?> 
                 </ul>
             </div>
         </div>
-        <?php }?>
-    </div>
+    <?php }?>
+</div>
 </section>
 <?php get_footer(); ?>

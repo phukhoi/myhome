@@ -6,9 +6,9 @@
         $phone = $maxthemes['basic-phone']; 
         $title = $maxthemes['basic-title']; 
         $fb = $maxthemes['basic-social-facebook']; 
-        $twitter = $maxthemes['basic-social-twitter']; 
-        $pinterest = $maxthemes['basic-social-pinterest']; 
-        $dribbble = $maxthemes['basic-social-dribbble']; 
+        //$twitter = $maxthemes['basic-social-twitter']; 
+        //$pinterest = $maxthemes['basic-social-pinterest']; 
+        //$dribbble = $maxthemes['basic-social-dribbble']; 
         $linkedin = $maxthemes['basic-social-linkedin']; 
         ?>
         <section class="footer-section pad-t80 pad-b30 parallax" style="background-color: #222;">

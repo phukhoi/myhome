@@ -19,7 +19,8 @@ class enqueue
 		wp_enqueue_style('font-awesome', MAXTHEMES_URI_ASSET . 'css/font-awesome.min.css');
 		wp_enqueue_style('css-lineicon', MAXTHEMES_URI_ASSET . 'css/lineicon.css');
 		wp_enqueue_style('flaticon-lineicon', MAXTHEMES_URI_ASSET . 'flaticon/flaticon.css');
-		wp_enqueue_style('lightbox', MAXTHEMES_URI_ASSET . 'css/lightbox.css');
+		//wp_enqueue_style('lightbox', MAXTHEMES_URI_ASSET . 'css/lightbox.css');
+		wp_enqueue_style('fancybox', MAXTHEMES_URI_ASSET . 'jquery.fancybox.min.css');
 		wp_enqueue_style('jquery-ui', MAXTHEMES_URI_ASSET . 'css/jquery-ui.min.css');
 		wp_enqueue_style('owl-carousel', MAXTHEMES_URI_ASSET . 'css/owl.carousel.css');
 		wp_enqueue_style('owl-theme', MAXTHEMES_URI_ASSET . 'css/owl.theme.css');
@@ -29,6 +30,7 @@ class enqueue
 		wp_enqueue_style('style', MAXTHEMES_URI_ASSET . 'css/style.css?v=1.2');
 		wp_enqueue_style('responsive', MAXTHEMES_URI_ASSET . 'css/responsive.css?v=1.2');
 		wp_enqueue_style('myhome', MAXTHEMES_URI_ASSET . 'css/myhome.css');
+		//wp_enqueue_style('lightbox-custome', MAXTHEMES_URI_ASSET . 'css/lightbox-custome.css');
 		wp_enqueue_style( 'custom-css', MAXTHEMES_URI_ASSET . 'css/custom-css.css?v=1.2',false,'1.1','all');
 	}
 	public function addScripts()
@@ -50,12 +52,12 @@ class enqueue
 		wp_enqueue_script('slick', MAXTHEMES_URI_ASSET .'slick/slick.min.js', array(), '', true);
 		wp_enqueue_script('jquery-countTo', MAXTHEMES_URI_ASSET .'js/jquery.countTo.js', array(), '', true);
 		wp_enqueue_script('jquery-isotope', MAXTHEMES_URI_ASSET .'js/jquery.isotope.min.js', array(), '', true);
-		wp_enqueue_script('lightbox', MAXTHEMES_URI_ASSET .'js/lightbox.js', array(), '', true);
+		//wp_enqueue_script('lightbox', MAXTHEMES_URI_ASSET .'js/lightbox.js', array(), '', true);
 		wp_enqueue_script('owl-carousel', MAXTHEMES_URI_ASSET .'js/owl.carousel.js', array(), '', true);
 		wp_enqueue_script('jquery-easypiechart', MAXTHEMES_URI_ASSET .'js/jquery.easypiechart.js', array(), '', true);
 		wp_enqueue_script('jquery-YTPlayer', MAXTHEMES_URI_ASSET .'js/jquery.mb.YTPlayer.js', array(), '', true);
-		//wp_enqueue_script('jquery-core', MAXTHEMES_URI_ASSET .'js/jquery.ui.core.min.js', array(), '', true);
 		wp_enqueue_script('jquery-datepicker',MAXTHEMES_URI_ASSET . 'js/jquery-ui-1.9.2.datepicker.min.js', array(), '', true);
+		wp_enqueue_script('fancybox', MAXTHEMES_URI_ASSET .'jquery.fancybox.min.js', array(), '', true);
 		wp_enqueue_script('jquery-main', MAXTHEMES_URI_ASSET .'js/main.js', array(), '', true);
 		wp_enqueue_script('myhome', MAXTHEMES_URI_ASSET .'js/myhome.js', array(), '', true);
 	}

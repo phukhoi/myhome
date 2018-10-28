@@ -43,20 +43,7 @@ $ads = get_posts($args_ads);
                 <div class="col-md-12 header-text">
                     <h3><?php woocommerce_page_title(); ?></h3>
                 </div>
-            </div>
-<!-- <section class="header-breadcrumb" style="background-image: url(/wp-content/uploads/2018/05/header-bg.png);">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-5">
-                <div class="page-title">
-                    <h1><?php woocommerce_page_title(); ?></h1>
-                </div>
-            </div>
-            <div class="col-md-7">
-            </div>
-        </div>
-    </div>
-</section> -->
+            </div> 
             <div class="content-page pad-b50">
                 <div class="container">
                     <div class="row">

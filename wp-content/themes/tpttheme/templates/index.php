@@ -28,13 +28,7 @@ $wpb_post = get_posts($args_post);
 						<div class="latest-news">
 							<div class="latest-news-img">
 								<a href="<?php echo get_permalink( $item->ID ); ?>">
-								<?php
-								$image = wp_get_attachment_image_src( get_post_thumbnail_id( $item->ID ), "single-post-thumbnail" );
-								if(empty($image)){
-									$image[0] = 'http://ttppower.com.vn/wp-content/uploads/2017/12/thumb.png';
-								}
-								?>
-								<img src="<?php echo $image[0]; ?>?v=1.1" class="img-responsive" alt="<?php echo esc_html( $item->post_title ); ?>"> 
+									<img src="<?php echo get_the_post_thumbnail_url($item->ID); ?>" class="img-responsive" alt="<?php echo esc_html( $item->post_title ); ?>"> 
 								</a>
 							</div>
 							<h4><a href="<?php echo get_permalink( $item->ID ); ?>"><?php echo esc_html( $item->post_title ); ?></a></h4>
