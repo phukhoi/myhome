@@ -1441,9 +1441,12 @@ ul.filter li a.active {
     opacity: 0;
     overflow: hidden; }
     .portfolio-post .hover-box .inner-hover {
-      position: absolute;
-      height: 100%;
-      width: 100%; }
+        position: absolute;
+        margin-top: -120px;
+        top: 50%;
+        height: 100%;
+        width: 100%;
+      }
       .portfolio-post .hover-box .inner-hover h4 {
         color: #434343;
         font-size: 18px;

@@ -678,6 +678,49 @@ ul.cate-products li a:hover {
 }
 
 
+.running-project-2 .title-main {
+	margin-bottom: 25px;
+	width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.running-project-2.item-slider {
+	padding: 0 10px;
+}
+
+.data-fancybox-prev, .data-fancybox-next svg {
+	display: none;
+}
+/*.fancybox-navigation {
+	position: relative;
+}*/
+.fancybox-button.fancybox-button--arrow_left:after {
+	content: '';
+	position: absolute;
+	background: url('../images/icon/left-arrow.png');
+	background-size: cover;
+	background-repeat: no-repeat;
+	top: 50%;
+	transform: translate(-50%);
+	right: 100%;
+	width: 30px;
+	height: 30px;
+}
+.fancybox-button.fancybox-button--arrow_right:after {
+	content: '';
+	position: absolute;
+	background: url('../images/icon/right-arrow.png')
+	background-size: cover;
+	background-repeat: no-repeat;
+	top: 50%;
+	right: 0px;
+	width: 30px;
+	height: 30px;
+}
+
+
 @media screen and (max-width: 1920px) {
 	.navbar.navbar-default .navbar-nav>li>a {
 		padding: 70px 20px;
