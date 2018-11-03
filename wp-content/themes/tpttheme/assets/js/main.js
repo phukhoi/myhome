@@ -94,7 +94,7 @@
             itemsTablet: [767,2],
             slideSpeed: 2500,
             stopOnHover: true,
-            autoPlay: true,
+            autoPlay: false,
             singleItem: false,
             navigationText: ['<i class="fa fa-chevron-left"></i>', '<i class="fa fa-chevron-right"></i>']
         });
@@ -148,7 +148,27 @@
             jQuery(".player").mb_YTPlayer();
         } catch (err) {}
 
-        
+
+        // $("[data-fancybox]").fancybox({
+        //     afterShow: function( instance, current ) {
+        //         if ( current.$content ) {
+        //             arrowLeft = '<button data-fancybox-prev class="fancybox-button fancybox-button--arrow_left1" title="Prev">&lt;</button>';
+        //             arrowRight = '<button data-fancybox-next class="fancybox-button fancybox-button--arrow_right1" title="Next">&gt;</button>';
+
+        //             current.$content.append(arrowLeft + arrowRight);
+
+        //             current.$content.on('click.fb-prev touchend.fb-prev', '[data-fancybox-prev]', function(e) {
+        //                 e.stopPropagation();
+        //                 e.preventDefault();
+        //                 alert('Go To Prev');
+        //             }).on( 'click.fb-next touchend.fb-next', '[data-fancybox-next]', function(e) {
+        //                 e.stopPropagation();
+        //                 e.preventDefault();
+        //                 alert('Go To Next');
+        //             });
+        //         }
+        //     },
+        // }); 
         // $('.partner').slick({
         //     dots: false,
         //     infinite: false,
