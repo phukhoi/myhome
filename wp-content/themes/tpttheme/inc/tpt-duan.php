@@ -39,12 +39,33 @@ $wpb_duan = new WP_Query(array('post_type'=>'duan', 'post_status'=>'publish'));
                 <?php } ?>
                 <script type="text/javascript">
                 $( document ).ready(function() {
+                    $("[data-fancybox]").fancybox({
+                        afterShow: function( instance, current ) {
+                            console.log('current', current);
+                            if ( current.$content ) {
+                                arrowLeft = '<button data-fancybox-prev class="fancybox-button fancybox-button--arrow_left1" style="position: absolute; left: 0" title="Prev">Pre</button>';
+                                arrowRight = '<button data-fancybox-next class="fancybox-button fancybox-button--arrow_right1" style="position: absolute; right: 0" title="Next">Next</button>';
+
+                                current.$content.append(arrowLeft + arrowRight);
+
+                                current.$content.on('click.fb-prev touchend.fb-prev', '[data-fancybox-prev]', function(e) {
+                                    e.stopPropagation();
+                                    e.preventDefault();
+                                    $('.fancybox-button--arrow_left').trigger('click');
+                                }).on( 'click.fb-next touchend.fb-next', '[data-fancybox-next]', function(e) {
+                                    e.stopPropagation();
+                                    e.preventDefault();
+                                    $('.fancybox-button--arrow_right').trigger('click');
+                                });
+                            }
+                        },
+                    }); 
                     $('.box<?php echo $post->ID ?>').on('click', function(){
                         $(".fancybox-image-wrap").each(function(){
                             $(this).prepend("<div style='position:relative;top:-30px;color:white;font-weight: bold; text-align: center' class='popup-title'></div>"); 
                             $('.popup-title').html('');
                             $('.popup-title').html('<?php echo get_the_title(); ?>'.toUpperCase());
-                            console.log('title:', '<?php echo get_the_title(); ?>')
+                            
                         })
                     })        
                 });
