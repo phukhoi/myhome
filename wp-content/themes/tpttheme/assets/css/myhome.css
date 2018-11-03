@@ -690,26 +690,16 @@ ul.cate-products li a:hover {
 	padding: 0 10px;
 }
 
-.data-fancybox-prev, .data-fancybox-next svg {
+.fancybox-button svg {
 	display: none;
 }
-/*.fancybox-navigation {
-	position: relative;
-}*/
-.fancybox-button.fancybox-button--arrow_left:after {
-	content: '';
-	position: absolute;
-	background: url('../images/icon/left-arrow.png');
-	background-size: cover;
-	background-repeat: no-repeat;
-	top: 50%;
-	transform: translate(-50%);
-	right: 100%;
-	width: 30px;
-	height: 30px;
+
+.fancybox-button.fancybox-button--arrow_left:before {
+	background-color: transparent;
 }
-.fancybox-button.fancybox-button--arrow_right:after {
-	content: '';
+.fancybox-button.fancybox-button--arrow_right:before {
+	background-color: transparent;
+	/*content: '';
 	position: absolute;
 	background: url('../images/icon/right-arrow.png')
 	background-size: cover;
@@ -717,9 +707,29 @@ ul.cate-products li a:hover {
 	top: 50%;
 	right: 0px;
 	width: 30px;
-	height: 30px;
+	height: 30px;*/
 }
 
+.data-fancybox-custom {
+	position: absolute;
+	top: 50%;
+}
+.data-fancybox-custom.fancybox-button--arrow_style-left {
+	position: absolute;
+	left: 10px;
+	background: url('../images/icon/left-arrow.png');
+	background-color: transparent;
+	background-size: 60%;
+	background-repeat: no-repeat;
+}
+.data-fancybox-custom.fancybox-button--arrow_style-right {
+	position: absolute;
+	right: -10px;
+	background: url('../images/icon/right-arrow.png');
+	background-color: transparent;
+	background-size: 60%;
+	background-repeat: no-repeat;
+}
 
 @media screen and (max-width: 1920px) {
 	.navbar.navbar-default .navbar-nav>li>a {

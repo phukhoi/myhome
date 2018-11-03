@@ -1632,3 +1632,5 @@ Stack trace:
 
 2018-07-07T15:42:43+00:00 CRITICAL Call to undefined function wp_trim_word()
 
+2018-11-03T15:35:53+00:00 CRITICAL Maximum execution time of 30 seconds exceeded
+

@@ -45,8 +45,8 @@ $wpb_duan = new WP_Query(array('post_type'=>'duan', 'post_status'=>'publish'));
                         afterShow: function( instance, current ) {
                             console.log('current', current);
                             if ( current.$content ) {
-                                arrowLeft = '<button data-fancybox-prev class="fancybox-button fancybox-button--arrow_left1" style="position: absolute; left: 0" title="Prev">Pre</button>';
-                                arrowRight = '<button data-fancybox-next class="fancybox-button fancybox-button--arrow_right1" style="position: absolute; right: 0" title="Next">Next</button>';
+                                arrowLeft = '<button data-fancybox-prev class="data-fancybox-custom fancybox-button fancybox-button--arrow_style-left"  title="Prev"></button>';
+                                arrowRight = '<button data-fancybox-next class="data-fancybox-custom  fancybox-button fancybox-button--arrow_style-right"  title="Next"></button>';
 
                                 current.$content.append(arrowLeft + arrowRight);
 
