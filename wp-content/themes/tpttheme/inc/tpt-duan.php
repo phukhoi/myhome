@@ -9,7 +9,7 @@ $wpb_duan = new WP_Query(array('post_type'=>'duan', 'post_status'=>'publish'));
                     <h3>thiết kế & thi công</h3>
                 </div>
             </div>
-            <div class="owl-scroll">
+            <div class="row owl-scroll">
                 <?php while ( $wpb_duan->have_posts() ) : $wpb_duan->the_post(); ?>
                     <?php 
                     $gallery = get_field('gallery_fields'); 
@@ -18,11 +18,14 @@ $wpb_duan = new WP_Query(array('post_type'=>'duan', 'post_status'=>'publish'));
                     <?php if ( has_post_thumbnail() ) { ?>
                         <div class="row">
                             <div class="col-md-12">
-                                <div class="running-project-2 item-slider box<?php echo $post->ID ?>">
+                                <div class="running-project-2 item-slider fancybox box<?php echo $post->ID ?>" data-fancybox="gallery-<?php echo ( $post->ID ); ?>" title="<?php echo ( $post->post_title ); ?>" href="<?php echo $img_first; ?>?v=1.1" data-title-id="title-<?php echo $post->ID ?>" >
                                     <!-- <h4 class="title-main"><?php echo esc_html( get_the_title() ); ?></h4>  -->
-                                    <a class="fancybox zoom img" href="<?php echo $img_first; ?>?v=1.1" title="<?php echo ( $post->post_title ); ?>" data-fancybox="gallery-<?php echo ( $post->ID ); ?>" href="<?php echo $img_first; ?>">
+                                    <a class="fancybox zoom img" href="<?php echo $img_first; ?>?v=1.1" title="<?php echo ( $post->post_title ); ?>" data-fancybox="gallery-<?php echo ( $post->ID ); ?>" href="<?php echo $img_first; ?>" data-title-id="title-<?php echo $post->ID ?>">
                                     <img class="img-responsive" src="<?php echo get_the_post_thumbnail_url($post->ID); ?>" alt="<?php echo esc_html( get_the_title() ); ?>">
                                     </a>
+                                    <div id="title-<?php echo $post->ID ?>" class="hidden">
+                                        <?php echo $post->post_title ?>
+                                    </div>
                                     <div class="project-details">
                                         <h4><?php echo esc_html( get_the_title() ); ?></h4> 
                                         <a class="fancybox zoom img" href="<?php echo $img_first; ?>?v=1.1" title="<?php echo ( $post->post_title ); ?>" data-fancybox="gallery-<?php echo ( $post->ID ); ?>" href="<?php echo $img_first; ?>">
@@ -42,10 +45,24 @@ $wpb_duan = new WP_Query(array('post_type'=>'duan', 'post_status'=>'publish'));
                 <?php } ?>
                 <script type="text/javascript">
                 $( document ).ready(function() {
-                    $("[data-fancybox]").fancybox({
+                   
+                    $(".fancybox")
+                        .attr('rel', 'gallery')
+                        .fancybox({
                         afterShow: function( instance, current ) {
+                            console.log('instance', instance);
                             console.log('current', current);
                             if ( current.$content ) {
+
+                                current.$content.prepend("<div style='position:relative;top:-30px;color:white;font-weight: bold; text-align: center' class='popup-title'></div>"); 
+                                $('.popup-title').html('');
+                                
+                                var title = $('.fancybox').data('title-id');
+                                // console.log(current.$content)
+                                // console.log(current.find($('.fancybox')));
+                                $('.popup-title').html($('#'+title).html().toUpperCase());
+                            
+                                
                                 arrowLeft = '<button data-fancybox-prev class="data-fancybox-custom fancybox-button fancybox-button--arrow_style-left"  title="Prev"></button>';
                                 arrowRight = '<button data-fancybox-next class="data-fancybox-custom  fancybox-button fancybox-button--arrow_style-right"  title="Next"></button>';
 
@@ -61,16 +78,16 @@ $wpb_duan = new WP_Query(array('post_type'=>'duan', 'post_status'=>'publish'));
                                     $('.fancybox-button--arrow_right').trigger('click');
                                 });
                             }
-                        },
-                    }); 
-                    $('.box<?php echo $post->ID ?>').on('click', function(){
-                        $(".fancybox-image-wrap").each(function(){
-                            $(this).prepend("<div style='position:relative;top:-30px;color:white;font-weight: bold; text-align: center' class='popup-title'></div>"); 
-                            $('.popup-title').html('');
-                            $('.popup-title').html('<?php echo get_the_title(); ?>'.toUpperCase());
+                        }
+                        });
+                    // $('.box<?php echo $post->ID ?>').on('click', function(){
+                    //     $(".fancybox-image-wrap").each(function(){
+                    //         $(this).prepend("<div style='position:relative;top:-30px;color:white;font-weight: bold; text-align: center' class='popup-title'></div>"); 
+                    //         $('.popup-title').html('');
+                    //         $('.popup-title').html('<?php echo get_the_title(); ?>'.toUpperCase());
                             
-                        })
-                    })        
+                    //     })
+                    // })        
                 });
                 </script>
             <?php endwhile; wp_reset_postdata();?>

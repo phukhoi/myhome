@@ -25,7 +25,7 @@ $wpb_post = get_posts($args_post);
 			<div class="row owl-scroll">
 				<?php foreach($wpb_post as $item):?>
 					<div class="col-md-12">
-						<div class="latest-news">
+						<div class="latest-news running-project-2 item-slider ">
 							<div class="latest-news-img">
 								<a href="<?php echo get_permalink( $item->ID ); ?>">
 									<img src="<?php echo get_the_post_thumbnail_url($item->ID); ?>" class="img-responsive" alt="<?php echo esc_html( $item->post_title ); ?>"> 

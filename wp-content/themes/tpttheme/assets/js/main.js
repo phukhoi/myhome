@@ -90,7 +90,7 @@
             navigation: false,
             items : 3,
             itemsDesktop : [1000,3],
-            itemsDesktopSmall : [900,3],
+            itemsDesktopSmall : [920,2],
             itemsTablet: [767,2],
             slideSpeed: 2500,
             stopOnHover: true,
