@@ -159,7 +159,7 @@ $ads = get_posts($args_ads);
                             <?php } ?>
                             <?php if($ads){?>
                                 <?php foreach($ads as $item_ads){?>
-                                    <div class="row" style="margin-bottom: 10px;">  
+                                    <div class="row" style="margin-bottom: 10px; padding-top: 10px">  
                                         <div class="col-sm-12">
                                         <img src="<?php echo get_the_post_thumbnail_url($item_ads->ID); ?>" class="img-responsive"/>
                                         </div> 

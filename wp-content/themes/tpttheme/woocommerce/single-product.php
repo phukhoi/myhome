@@ -153,7 +153,7 @@ $ads = get_posts($args_ads);
                                     'columns' => 4,
                                     'orderby' => 'rand',
                                 );
-                                woocommerce_related_products(apply_filters('woocommerce_output_related_products_args', $args));
+                                // woocommerce_related_products(apply_filters('woocommerce_output_related_products_args', $args));
                                 ?>
                             </div>
 

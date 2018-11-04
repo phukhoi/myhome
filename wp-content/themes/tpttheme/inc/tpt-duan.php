@@ -19,15 +19,16 @@ $wpb_duan = new WP_Query(array('post_type'=>'duan', 'post_status'=>'publish'));
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="running-project-2 item-slider box<?php echo $post->ID ?>">
-                                    <h4 class="title-main"><?php echo esc_html( get_the_title() ); ?></h4> 
+                                    <!-- <h4 class="title-main"><?php echo esc_html( get_the_title() ); ?></h4>  -->
                                     <a class="fancybox zoom img" href="<?php echo $img_first; ?>?v=1.1" title="<?php echo ( $post->post_title ); ?>" data-fancybox="gallery-<?php echo ( $post->ID ); ?>" href="<?php echo $img_first; ?>">
                                     <img class="img-responsive" src="<?php echo get_the_post_thumbnail_url($post->ID); ?>" alt="<?php echo esc_html( get_the_title() ); ?>">
                                     </a>
-                                    <!-- <div class="project-details">
+                                    <div class="project-details">
+                                        <h4><?php echo esc_html( get_the_title() ); ?></h4> 
                                         <a class="fancybox zoom img" href="<?php echo $img_first; ?>?v=1.1" title="<?php echo ( $post->post_title ); ?>" data-fancybox="gallery-<?php echo ( $post->ID ); ?>" href="<?php echo $img_first; ?>">
                                             <img class="gallery-hover-icon project-hover-icon" src="<?php echo get_template_directory_uri().'/assets/images/icon/gallery-icon.png' ?>" alt="<?php echo esc_html( $post->post_title ); ?>">   
                                         </a>
-                                    </div> -->
+                                    </div>
                                     <?php if(isset($gallery) && !empty($gallery)) {?>
                                         <div class="hidden">
                                            <?php for($i = 1 ; $i<count($gallery); $i++){?>

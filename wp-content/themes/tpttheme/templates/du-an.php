@@ -65,7 +65,7 @@ $count_all = count($wpb_all_query);
         </div>
         <?php if ( $wpb_all_query) : ?> 
             <div class="row">
-                <div class="portfolio-box du-an-box">
+                <div class="portfolio-box du-an-box  box<?php echo $post->ID ?>">
                     <?php foreach ( $wpb_all_query as $post ) : setup_postdata( $post ); ?>
                         <?php 
                         $gallery = get_field('gallery_fields'); 
@@ -75,12 +75,15 @@ $count_all = count($wpb_all_query);
                             <div class="bedroom">
                                 <div class="portfolio-post mb30">
                                     <img src="<?php echo get_the_post_thumbnail_url($post->ID); ?>" alt="<?php echo esc_html( $post->post_title ); ?>">
-                                    <div class="hover-box">
+                                    <div class="hover-box fancybox" data-title-id="title-<?php echo $post->ID ?>"  role="button" title="<?php echo ( $post->post_title ); ?>"  data-fancybox="gallery-<?php echo ( $post->ID ); ?>" href="<?php echo $img_first; ?>" title="<?php echo esc_html( $post->post_title ); ?>">
                                         <div class="inner-hover">
                                             <h4><?php echo esc_html( $post->post_title ); ?></h4>
-                                            <a role="button" class="zoom img fancybox" title="<?php echo ( $post->post_title ); ?>"  data-fancybox="gallery-<?php echo ( $post->ID ); ?>" href="<?php echo $img_first; ?>" title="<?php echo esc_html( $post->post_title ); ?>">
+                                            <a data-title-id="title-<?php echo $post->ID ?>"  role="button" class="zoom img fancybox" title="<?php echo ( $post->post_title ); ?>"  data-fancybox="gallery-<?php echo ( $post->ID ); ?>" href="<?php echo $img_first; ?>" title="<?php echo esc_html( $post->post_title ); ?>">
                                                 <img class="gallery-hover-icon" src="<?php echo get_template_directory_uri().'/assets/images/icon/gallery-icon.png' ?>" alt="<?php echo esc_html( $post->post_title ); ?>">   
                                             </a>
+                                            <div id="title-<?php echo $post->ID ?>" class="hidden">
+                                                This is 1st title. <a href="http://google.com">Some link</a>
+                                            </div>
                                             <a role="button" class="hidden zoom title fancybox" title="<?php echo ( $post->post_title ); ?>">
                                                 <p>Xem thêm</p> 
                                             </a>
@@ -88,7 +91,7 @@ $count_all = count($wpb_all_query);
                                         <?php if(isset($gallery) && !empty($gallery)) {?>
                                             <div class="hidden">
                                              <?php for($i = 1 ; $i<count($gallery); $i++){?>
-                                                <a class="fancybox"  data-fancybox="gallery-<?php echo ( $post->ID ); ?>" href="<?php echo $gallery[$i]['url'];?>"><img src="<?php echo $gallery[$i]['url'];?>" title="<?php echo $item['title'];?>" title="<?php echo esc_html( $post->post_title ); ?>"/></a>
+                                                <a class="fancybox"  data-fancybox="gallery-<?php echo ( $post->ID ); ?>" href="<?php echo $gallery[$i]['url'];?>"><img src="<?php echo $gallery[$i]['url'];?>"  title="<?php echo esc_html( $post->post_title ); ?>"/></a>
                                             <?php }?> 
                                         </div>
                                     <?php }?>
@@ -96,6 +99,49 @@ $count_all = count($wpb_all_query);
                             </div>
                         </div> 
                     <?php } ?>
+                    <script type="text/javascript">
+                    $( document ).ready(function() {
+                        $("[data-fancybox]").fancybox({
+                            afterShow: function( instance, current ) {
+                                if ( current.$content ) {
+                                    arrowLeft = '<button data-fancybox-prev class="data-fancybox-custom fancybox-button fancybox-button--arrow_style-left"  title="Prev"></button>';
+                                    arrowRight = '<button data-fancybox-next class="data-fancybox-custom  fancybox-button fancybox-button--arrow_style-right"  title="Next"></button>';
+
+                                    current.$content.append(arrowLeft + arrowRight);
+
+                                    current.$content.on('click.fb-prev touchend.fb-prev', '[data-fancybox-prev]', function(e) {
+                                        e.stopPropagation();
+                                        e.preventDefault();
+                                        $('.fancybox-button--arrow_left').trigger('click');
+                                    }).on( 'click.fb-next touchend.fb-next', '[data-fancybox-next]', function(e) {
+                                        e.stopPropagation();
+                                        e.preventDefault();
+                                        $('.fancybox-button--arrow_right').trigger('click');
+                                    });
+                                }
+                            },
+                            beforeLoad: function() {
+                                var el, id = $(this.element).data('title-id');
+
+                                if (id) {
+                                    el = $('#' + id);
+                                
+                                    if (el.length) {
+                                        this.title = el.html();
+                                    }
+                                }
+                            }
+                        }); 
+                        $('.box<?php echo $post->ID ?>').on('click', function(){
+                            $(".fancybox-image-wrap").each(function(){
+                                $(this).prepend("<div style='position:relative;top:-30px;color:white;font-weight: bold; text-align: center' class='popup-title'></div>"); 
+                                $('.popup-title').html('');
+                                $('.popup-title').html('<?php echo get_the_title($post->ID); ?>'.toUpperCase());
+                                
+                            })
+                        })        
+                    });
+                </script>
                 <?php endforeach; wp_reset_postdata();?>
             </div>
         </div>

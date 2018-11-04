@@ -31,7 +31,7 @@ $ads = get_posts($args_ads);
     <section id="content-products" class="grey-bg">
         <div class="container grey-bg">
             <div class="row">
-                <div class="col-md-3 col-xs-12">
+                <div class="col-md-3 col-xs-12 pad-t30">
                     <?php if($ads){?>
                         <?php foreach($ads as $item_ads){?>
                             <div style="margin-bottom: 10px;">
