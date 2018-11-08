@@ -5,7 +5,9 @@
 	padding: 0 0 0 0;
 	z-index: 1000;
 }
-
+.fancybox-caption-wrap{
+	opacity: 0 !important;
+}
 .header-breadcrumb {
 	background-size: 100% 100%;
 	background-size: cover;
