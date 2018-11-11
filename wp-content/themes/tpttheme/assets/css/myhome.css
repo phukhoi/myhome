@@ -418,10 +418,10 @@ a.btn-contact {
 .section-detail .feature-2 {
 	padding: 20px 0 !important;
 }
-/* 
-.portfolio-box .bedroom:nth-child(2n+1) {
+
+.portfolio-box .bedroom:nth-child(3n+1) {
 	clear: both;
-} */
+}
 
 .portfolio-box .bedroom img {
 	max-height: 400px;
