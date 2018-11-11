@@ -72,15 +72,7 @@ $wpb_duan = new WP_Query(array('post_type'=>'duan', 'post_status'=>'publish'));
                             }
                         }
                         });
-                    // $('.box<?php echo $post->ID ?>').on('click', function(){
-                    //     $(".fancybox-image-wrap").each(function(){
-                    //         $(this).prepend("<div style='position:relative;top:-30px;color:white;font-weight: bold; text-align: center' class='popup-title'></div>"); 
-                    //         $('.popup-title').html('');
-                    //         $('.popup-title').html('<?php echo get_the_title(); ?>'.toUpperCase());
-                            
-                    //     })
-                    // })        
-                });
+                    });
                 </script>
             <?php endwhile; wp_reset_postdata();?>
         </div>

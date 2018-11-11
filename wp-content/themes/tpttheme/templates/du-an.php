@@ -74,7 +74,7 @@ $count_all = count($wpb_all_query);
                         <div class="bedroom col-xs-12 col-sm-6 col-md-4">
                             <div class="portfolio-post mb30">
                                 <img src="<?php echo get_the_post_thumbnail_url($post->ID); ?>" alt="<?php echo esc_html( $post->post_title ); ?>">
-                                <div class="hover-box fancybox" data-title-id="title-<?php echo $post->ID ?>"  role="button" title="<?php echo ( $post->post_title ); ?>"  data-fancybox="gallery-<?php echo ( $post->ID ); ?>" href="<?php echo $img_first; ?>" title="<?php echo esc_html( $post->post_title ); ?>">
+                                <div class="hover-box fancybox" data-title-id="title-<?php echo $post->ID ?>"  role="button" title="<?php echo ( $post->post_title ); ?>"  data-fancybox="gallery-<?php echo ( $post->ID ); ?>" href="<?php echo $img_first; ?>" title="<?php echo esc_html( $post->post_title ); ?>" data-caption="<?php echo $post->post_title; ?>">
                                     <div class="inner-hover">
                                         <h4><?php echo esc_html( $post->post_title ); ?></h4>
                                         <a data-title-id="title-<?php echo $post->ID ?>"  role="button" class="zoom img fancybox" title="<?php echo ( $post->post_title ); ?>"  data-fancybox="gallery-<?php echo ( $post->ID ); ?>" href="<?php echo $img_first; ?>" title="<?php echo esc_html( $post->post_title ); ?>">
@@ -100,9 +100,19 @@ $count_all = count($wpb_all_query);
                 <?php } ?>
                 <script type="text/javascript">
                 $( document ).ready(function() {
-                    $("[data-fancybox]").fancybox({
+                   
+                    $(".fancybox")
+                        .attr('rel', 'gallery')
+                        .fancybox({
                         afterShow: function( instance, current ) {
                             if ( current.$content ) {
+
+                                current.$content.prepend("<div style='position:relative;top:-30px;color:white;font-weight: bold; text-align: center' class='popup-title'></div>"); 
+                                $('.popup-title').html('');
+                                
+                                var title = $('.fancybox-caption').html();
+                                $('.popup-title').html(title.toUpperCase());
+                                
                                 arrowLeft = '<button data-fancybox-prev class="data-fancybox-custom fancybox-button fancybox-button--arrow_style-left"  title="Prev"></button>';
                                 arrowRight = '<button data-fancybox-next class="data-fancybox-custom  fancybox-button fancybox-button--arrow_style-right"  title="Next"></button>';
 
@@ -118,29 +128,10 @@ $count_all = count($wpb_all_query);
                                     $('.fancybox-button--arrow_right').trigger('click');
                                 });
                             }
-                        },
-                        beforeLoad: function() {
-                            var el, id = $(this.element).data('title-id');
-
-                            if (id) {
-                                el = $('#' + id);
-                            
-                                if (el.length) {
-                                    this.title = el.html();
-                                }
-                            }
                         }
-                    }); 
-                    $('.box<?php echo $post->ID ?>').on('click', function(){
-                        $(".fancybox-image-wrap").each(function(){
-                            $(this).prepend("<div style='position:relative;top:-30px;color:white;font-weight: bold; text-align: center' class='popup-title'></div>"); 
-                            $('.popup-title').html('');
-                            $('.popup-title').html('<?php echo get_the_title($post->ID); ?>'.toUpperCase());
-                            
-                        })
-                    })        
-                });
-            </script>
+                        });
+                    });
+                </script>
             <?php endforeach; wp_reset_postdata();?>
         </div>
     <?php endif; ?>
