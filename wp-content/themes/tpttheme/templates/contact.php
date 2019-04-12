@@ -52,30 +52,36 @@
     <div class="container">
         <div class="row">
             <div class="col-md-4">
-                <div class="feature-3 text-center">
-                    <div class="feature-icon">
-                        <i class="fa fa-map"></i>
+                <div class="contact-info-wrapper">
+                    <div class="feature-3 text-center">
+                        <div class="feature-icon">
+                            <i class="fa fa-map"></i>
+                        </div>
+                        <h3>ĐỊA CHỈ</h3>
+                        <p><?php echo $address; ?></p>
                     </div>
-                    <h3>ĐỊA CHỈ</h3>
-                    <p><?php echo $address; ?></p>
                 </div>
             </div>
             <div class="col-md-4">
-                <div class="feature-3 text-center">
-                    <div class="feature-icon">
-                        <i class="fa fa-mobile"></i>
+                <div class="contact-info-wrapper">
+                    <div class="feature-3 text-center">
+                        <div class="feature-icon">
+                            <i class="fa fa-mobile"></i>
+                        </div>
+                        <h3>HOTLINE</h3>
+                        <p><?php echo $hotline; ?></p>
                     </div>
-                    <h3>HOTLINE</h3>
-                    <p><?php echo $hotline; ?></p>
                 </div>
             </div>
             <div class="col-md-4">
-                <div class="feature-3 text-center">
-                    <div class="feature-icon">
-                        <i class="fa fa-envelope"></i>
+                <div class="contact-info-wrapper">
+                    <div class="feature-3 text-center">
+                        <div class="feature-icon">
+                            <i class="fa fa-envelope"></i>
+                        </div>
+                        <h3>EMAIL</h3>
+                        <p><?php echo $email; ?></p>
                     </div>
-                    <h3>EMAIL</h3>
-                    <p><?php echo $email; ?></p>
                 </div>
             </div>
         </div>

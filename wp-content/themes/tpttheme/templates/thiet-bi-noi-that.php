@@ -27,14 +27,6 @@ $args_ads = array (
 );
 $ads = get_posts($args_ads);
 //
-$args_partner = array (
-    'post_type' => 'partner',
-    'post_status' => 'publish',
-    'order' => 'DESC',
-    'orderby' => 'ID',
-    'posts_per_page' => -1
-);
-$partner = get_posts($args_partner);
 // echo ('<pre>');
 // print_r($all_left);
 // echo ('</pre>');
@@ -82,23 +74,7 @@ $partner = get_posts($args_partner);
                 <?php }?>
             <?php }?>
             <hr>
-            <div class="row" style="margin-left:0; margin-right: 0">
-                <div class="col-md-12 partner">
-                    <?php if($partner){?>
-                        <?php foreach($partner as $item_partner){?>
-                            <!-- <div class="border"> -->
-                                <div class="item">
-                                    <div class="partner-item">
-                                        <div class="partner-item-bd">
-                                            <img src="<?php echo get_the_post_thumbnail_url($item_partner->ID); ?>" class="img-responsive partner-img"/>
-                                        </div>
-                                    </div>
-                                </div>
-                            <!-- </div> -->
-                        <?php }?>
-                    <?php }?>
-                </div>
-            </div>
+            
         </div>
         
   </section>   

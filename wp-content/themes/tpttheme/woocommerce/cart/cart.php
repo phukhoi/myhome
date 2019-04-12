@@ -23,7 +23,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 wc_print_notices();
 
 do_action( 'woocommerce_before_cart' ); ?>
-
+<div class="cart-page-wrapper">
 <form class="woocommerce-cart-form" action="<?php echo esc_url( wc_get_cart_url() ); ?>" method="post">
 	<?php do_action( 'woocommerce_before_cart_table' ); ?>
 
@@ -154,4 +154,5 @@ do_action( 'woocommerce_before_cart' ); ?>
 	?>
 </div>
 
+</div>
 <?php do_action( 'woocommerce_after_cart' ); ?>

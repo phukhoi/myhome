@@ -10,7 +10,39 @@
         //$pinterest = $maxthemes['basic-social-pinterest']; 
         //$dribbble = $maxthemes['basic-social-dribbble']; 
         $linkedin = $maxthemes['basic-social-linkedin']; 
+
+        $args_partner = array (
+            'post_type' => 'partner',
+            'post_status' => 'publish',
+            'order' => 'DESC',
+            'orderby' => 'ID',
+            'posts_per_page' => -1
+        );
+        $partner = get_posts($args_partner);
         ?>
+        <section class="partner-section">
+            <div class="container">
+
+                <div class="row" style="margin-left:0; margin-right: 0">
+                    <div class="col-md-12 partner partner-slider">
+                        <?php if($partner){?>
+                            <?php foreach($partner as $item_partner){?>
+                                <!-- <div class="border"> -->
+                                    <div class="item">
+                                        <div class="partner-item">
+                                            <div class="partner-item-bd">
+                                                <img src="<?php echo get_the_post_thumbnail_url($item_partner->ID); ?>" class="img-responsive partner-img"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                <!-- </div> -->
+                            <?php }?>
+                        <?php }?>
+                    </div>
+                </div>
+
+            </div>
+        </section>
         <section class="footer-section pad-t80 pad-b30 parallax" style="background-color: #222;">
             <div class="container">
                 <div class="row">

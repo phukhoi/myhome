@@ -18,6 +18,11 @@ $s = isset($_GET['s']) && !empty($_GET['s']) ? $_GET['s'] :'';
 ?>
 <section id ="header_products">
     <div class="container header_products">
+        <div class="cart-icon-wrapper">
+            <a href="/gio-hang">
+                <i class="fa fa-shopping-cart"></i>
+            </a>
+        </div>
         <div class="row">
             <?php if(isset($cats_parent)){ ?>
                 <div class="col-md-12">

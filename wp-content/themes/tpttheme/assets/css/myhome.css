@@ -485,11 +485,11 @@ button#u_0_2 {
 }
 
 .portfolio-post:hover .hover-box {
-	opacity: 0.9 !important;
+	/* opacity: 0.9 !important; */
 }
 
 .portfolio-post .hover-box {
-	background: #33322e !important;
+	/* background: #33322e !important; */
 }
 
 ul.cate-products {
@@ -629,16 +629,16 @@ ul.cate-products li a:hover {
 }
 
 .partner {
-	display: inline-block;
+	/* display: inline-block; */
 	padding: 20px 0;
 	background: #fff;
-	padding-left: 20px;
+	/* padding-left: 20px; */
 }
 
 .partner .item {
-	display: inline-block;
+	/* display: inline-block; */
     position: relative;
-    width: 16%;
+    /* width: 15%; */
     font-size: 0;
     padding: 0px 0px;
     vertical-align: top;
@@ -669,9 +669,21 @@ ul.cate-products li a:hover {
 }
 
 .header_products {
+	position: relative;
 	padding-bottom: 20px;
 }
-
+.cart-icon-wrapper {
+    position: absolute;
+	right: 0;
+	z-index: 100;
+}
+.fa-shopping-cart{
+	color: #fff;
+    font-size: 30px;
+}
+.cart-page-wrapper{
+	margin-top: 180px;
+}
 /* .du-an-box {
 	display: inline-block;
 	padding: 20px 0;
@@ -728,6 +740,22 @@ ul.cate-products li a:hover {
 	background-repeat: no-repeat;
 }
 
+.contact-info-wrapper{
+	padding: 20px 20px 10px 20px;
+	margin-bottom: 20px;
+
+}
+.contact-info-wrapper:hover{
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-shadow: 5px 5px 3px #ccc;
+}
+.fa-mobile{
+	font-size: 60px !important;
+}
+.slick-slide{
+	height: auto !important;
+}
 @media screen and (max-width: 1920px) {
 	.navbar.navbar-default .navbar-nav>li>a {
 		padding: 70px 20px;
@@ -804,9 +832,45 @@ ul.cate-products li a:hover {
 }
 
 @media screen and (max-width: 992px) {
-	.navbar.navbar-default .navbar-nav>li>a {
+	/* .navbar.navbar-default .navbar-nav>li>a {
 		padding: 20px 20px;
 		margin-top: -50px;
+	} */
+	.navbar.navbar-default .navbar-nav>li>a {
+		padding: 10px 5px;
+		font-size: 14px;
+	}
+
+	.navbar-brand img {
+		width: 45%;
+		margin-top: 0px;
+	}
+
+	.header-breadcrumb {
+		background-size: 100% 100%;
+		background-size: cover;
+		background-repeat: no-repeat;
+		margin-top: 80px !important;
+		height: 150px;
+		width: 100%;
+	}
+
+	.header-breadcrumb .page-title h1 {
+		padding-top: 60px;
+		font-size: 22px;
+	}
+
+	#furniture {
+		padding-top: 140px;
+	}
+
+	ul.cate-products li a {
+		font-size: 13px;
+	}
+
+	.partner {
+		display: block;
+		padding-left: 5px;
 	}
 }
 

@@ -77,9 +77,9 @@ $count_all = count($wpb_all_query);
                                 }
                                 ?>
                                 <img src="<?php echo $image[0]; ?>?v=1.1" class="img-responsive" alt="<?php echo esc_html( $post->post_title ); ?>">
-                                <div class="img-overlay">
+                                <!-- <div class="img-overlay">
                                     <i class="fa fa-link"></i>
-                                </div>
+                                </div> -->
                                 </a>
                             </div>
                         </div>
